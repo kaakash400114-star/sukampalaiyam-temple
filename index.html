@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>அருள்மிகு சுகாம்பாளையம் திருக்கோயில்</title>
+    <meta name="description" content="சுகாம்பாளையம் கிராமத்தின் அருள்நிறை ஆன்மீகத் தலம். Official website of Arulmigu Sukampalaiyam Temple: history, pooja timings, festivals, gallery, donations and contact.">
+    <meta name="keywords" content="சுகாம்பாளையம் திருக்கோயில், Sukampalaiyam Temple, Tamil temple, பூஜை நேரங்கள், திருவிழா, அன்னதானம்">
+    <meta name="author" content="சுகாம்பாளையம் திருக்கோயில் அறக்கட்டளை">
+    <meta name="theme-color" content="#8b0000">
+    <meta property="og:title" content="அருள்மிகு சுகாம்பாளையம் திருக்கோயில்">
+    <meta property="og:description" content="கோயில் வரலாறு, பூஜை நேரங்கள், திருவிழாக்கள், நன்கொடை மற்றும் தொடர்பு விவரங்கள்">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ta_IN">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8b0000;
+            --secondary-color: #ffd700;
+            --bg-color: #fcf8f2;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+        body {
+            font-family: 'Noto Sans Tamil', 'Latha', 'Tamil Sangam MN', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #5a0000);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 35px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; }
+        header p { margin: 10px 0 0; font-size: 1.1rem; color: #ffffff; }
+
+        .om-symbol { font-size: 1.8rem; display: block; margin-bottom: 5px; }
+
+        .lang-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            border: 1px solid var(--secondary-color);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .lang-toggle button {
+            background: transparent;
+            color: var(--secondary-color);
+            border: none;
+            padding: 5px 14px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: inherit;
+            font-size: 0.85rem;
+            transition: background 0.3s, color 0.3s;
+        }
+        .lang-toggle button.active { background: var(--secondary-color); color: var(--primary-color); }
+
+        nav {
+            background-color: #5a0000;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            margin: 4px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover, nav a.active { background-color: var(--secondary-color); color: var(--primary-color); }
+
+        .container { max-width: 1000px; margin: 25px auto; padding: 0 15px; }
+
+        section {
+            background: var(--card-bg);
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--primary-color);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        section.visible { opacity: 1; transform: translateY(0); }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        .timing-grid, .festival-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        .timing-card, .festival-card {
+            background: #fff8f0;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--secondary-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .timing-card:hover, .festival-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(139,0,0,0.15);
+        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        a { color: var(--primary-color); }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .gallery-item {
+            background: linear-gradient(160deg, #fff3d6, #ffe9b8);
+            min-height: 150px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7a4a00;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border: 2px dashed #e0b84a;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+        .gallery-item:hover, .gallery-item:focus {
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox-content {
+            background: var(--card-bg);
+            padding: 30px 40px;
+            border-radius: 8px;
+            max-width: 90%;
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2.5rem;
+            color: white;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .donation-box {
+            text-align: center;
+            background: #fff9e6;
+            border: 2px dashed var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .donation-box p { text-align: left; }
+        .copy-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 4px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.8rem;
+            margin-left: 8px;
+            transition: background 0.3s;
+        }
+        .copy-btn:hover { background: #5a0000; }
+
+        .countdown-box {
+            background: linear-gradient(135deg, #fff3d6, #ffe9b3);
+            border: 1px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1.05rem;
+        }
+        .countdown-box strong { color: var(--primary-color); }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.95rem;
+        }
+        .social-links { display: flex; justify-content: center; gap: 18px; margin-top: 12px; }
+        .social-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-links a:hover { transform: scale(1.25); color: #ffffff; }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1500;
+            border: 2px solid var(--secondary-color);
+        }
+        .back-to-top.show { display: flex; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.6rem; }
+            nav a { padding: 6px 10px; font-size: 0.9rem; }
+            .lang-toggle { position: static; margin: 12px auto 0; display: inline-flex; }
+        }
+        @media print {
+            nav, .back-to-top, .lang-toggle { display: none; }
+            section { opacity: 1; transform: none; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="om-symbol">🕉️</span>
+        <h1 data-ta="அருள்மிகு சுகாம்பாளையம் திருக்கோயில்" data-en="Arulmigu Sukampalaiyam Thirukkovil">அருள்மிகு சுகாம்பாளையம் திருக்கோயில்</h1>
+        <p data-ta="சுகாம்பாளையம் கிராமத்தின் அருள்நிறை ஆன்மீகத் தலம்" data-en="The blessed spiritual centre of Sukampalaiyam village">சுகாம்பாளையம் கிராமத்தின் அருள்நிறை ஆன்மீகத் தலம்</p>
+        <div class="lang-toggle" role="group" aria-label="Language / மொழி">
+            <button class="active" id="btn-ta" onclick="setLanguage('ta')">தமிழ்</button>
+            <button id="btn-en" onclick="setLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#about" data-ta="வரலாறு" data-en="History">வரலாறு</a>
+        <a href="#timings" data-ta="பூஜை நேரங்கள்" data-en="Pooja Timings">பூஜை நேரங்கள்</a>
+        <a href="#festivals" data-ta="திருவிழாக்கள்" data-en="Festivals">திருவிழாக்கள்</a>
+        <a href="#gallery" data-ta="புகைப்படங்கள்" data-en="Gallery">புகைப்படங்கள்</a>
+        <a href="#donations" data-ta="நன்கொடை" data-en="Donations">நன்கொடை</a>
+        <a href="#contact" data-ta="தொடர்புக்கு" data-en="Contact">தொடர்புக்கு</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="about">
+            <h2 data-ta="கோயில் வரலாறு மற்றும் சிறப்பு" data-en="Temple History &amp; Significance">கோயில் வரலாறு மற்றும் சிறப்பு</h2>
+            <p data-ta="சுகாம்பாளையம் கிராமத்தின் மையப்பகுதியில் வீற்றிருக்கும் அருள்மிகு திருக்கோயில் நமது ஊர் மக்களின் முக்கிய ஆன்மீகத் தலமாக விளங்கி வருகிறது. தலைமுறை தலைமுறையாக கிராமத்தைக் காத்து அருள்பாலிக்கும் மூலவரைத் தரிசிக்க சுகாம்பாளையம் மக்களும், சுற்றியுள்ள ஊர் பக்தர்களும் திரளாக வந்து வழிபாடுகள் நடத்தி வருகின்றனர்." data-en="The Arulmigu Thirukkovil at the heart of Sukampalaiyam village has long been the principal spiritual centre of our people. Generation after generation, villagers and devotees from surrounding villages gather here to worship the presiding deity who has guarded and blessed the village through the ages.">சுகாம்பாளையம் கிராமத்தின் மையப்பகுதியில் வீற்றிருக்கும் அருள்மிகு திருக்கோயில் நமது ஊர் மக்களின் முக்கிய ஆன்மீகத் தலமாக விளங்கி வருகிறது. தலைமுறை தலைமுறையாக கிராமத்தைக் காத்து அருள்பாலிக்கும் மூலவரைத் தரிசிக்க சுகாம்பாளையம் மக்களும், சுற்றியுள்ள ஊர் பக்தர்களும் திரளாக வந்து வழிபாடுகள் நடத்தி வருகின்றனர்.</p>
+        </section>
+
+        <section id="timings">
+            <h2 data-ta="தினசரி நடை மற்றும் பூஜை நேரங்கள்" data-en="Daily Darshan &amp; Pooja Timings">தினசரி நடை மற்றும் பூஜை நேரங்கள்</h2>
+            <div class="timing-grid">
+                <div class="timing-card">
+                    <h3 data-ta="காலை பூஜை நேரங்கள்" data-en="Morning Pooja">காலை பூஜை நேரங்கள்</h3>
+                    <p><strong data-ta="நடை திறப்பு:" data-en="Opens:">நடை திறப்பு:</strong> <span data-ta="காலை 6:00 மணி" data-en="6:00 AM">காலை 6:00 மணி</span></p>
+                    <p><strong data-ta="காலை அபிஷேகம் & பூஜை:" data-en="Abhishekam &amp; pooja:">காலை அபிஷேகம் & பூஜை:</strong> <span data-ta="காலை 7:30 மணி" data-en="7:30 AM">காலை 7:30 மணி</span></p>
+                    <p><strong data-ta="உச்சிகால பூஜை & நடை சாத்துதல்:" data-en="Uchikala pooja &amp; closing:">உச்சிகால பூஜை & நடை சாத்துதல்:</strong> <span data-ta="பகல் 12:00 மணி" data-en="12:00 PM">பகல் 12:00 மணி</span></p>
+                </div>
+                <div class="timing-card">
+                    <h3 data-ta="மாலை பூஜை நேரங்கள்" data-en="Evening Pooja">மாலை பூஜை நேரங்கள்</h3>
+                    <p><strong data-ta="நடை திறப்பு:" data-en="Opens:">நடை திறப்பு:</strong> <span data-ta="மாலை 4:30 மணி" data-en="4:30 PM">மாலை 4:30 மணி</span></p>
+                    <p><strong data-ta="சாயரட்சை தீபாராதனை:" data-en="Sayarakshai deeparathanai:">சாயரட்சை தீபாராதனை:</strong> <span data-ta="மாலை 6:30 மணி" data-en="6:30 PM">மாலை 6:30 மணி</span></p>
+                    <p><strong data-ta="இரவு பூஜை & நடை சாத்துதல்:" data-en="Night pooja &amp; closing:">இரவு பூஜை & நடை சாத்துதல்:</strong> <span data-ta="இரவு 8:00 மணி" data-en="8:00 PM">இரவு 8:00 மணி</span></p>
+                </div>
+            </div>
+            <div class="countdown-box">
+                <strong id="open-status">…</strong><br>
+                <span id="open-countdown"></span>
+            </div>
+        </section>
+
+        <section id="festivals">
+            <h2 data-ta="வருடாந்திர திருவிழாக்கள் மற்றும் சிறப்புகள்" data-en="Annual Festivals &amp; Special Events">வருடாந்திர திருவிழாக்கள் மற்றும் சிறப்புகள்</h2>
+            <div class="festival-grid">
+                <div class="festival-card">
+                    <h3 data-ta="வருடாந்திர பெருவிழா" data-en="Annual Grand Festival">வருடாந்திர பெருவிழா</h3>
+                    <p><strong data-ta="மாதம்:" data-en="Month:">மாதம்:</strong> <span data-ta="சித்திரை / வைகாசி" data-en="Chithirai / Vaikasi (Apr–Jun)">சித்திரை / வைகாசி</span></p>
+                    <p data-ta="சுகாம்பாளையம் கிராம மக்கள் அனைவரும் ஒன்று கூடி நடத்தும் பால்குடம், அலகு குத்துதல் மற்றும் பொங்கல் விழா." data-en="The whole village gathers for the paalkudam (milk-pot) procession, alagu (piercing vow) and the pongal festival.">சுகாம்பாளையம் கிராம மக்கள் அனைவரும் ஒன்று கூடி நடத்தும் பால்குடம், அலகு குத்துதல் மற்றும் பொங்கல் விழா.</p>
+                </div>
+                <div class="festival-card">
+                    <h3 data-ta="சிறப்பு அபிஷேகங்கள்" data-en="Special Abhishekams">சிறப்பு அபிஷேகங்கள்</h3>
+                    <p><strong data-ta="விசேஷ நாட்கள்:" data-en="Special days:">விசேஷ நாட்கள்:</strong> <span data-ta="அமாவாசை, பௌர்ணமி, பிரதோஷம்" data-en="Amavasai, Pournami, Pradosham">அமாவாசை, பௌர்ணமி, பிரதோஷம்</span></p>
+                    <p data-ta="சிறப்பு அபிஷேகம், மலர் அலங்காரம் மற்றும் பக்தர்களுக்குப் பிரசாத விநியோகம்." data-en="Special abhishekam, floral decoration and prasadam distribution to devotees.">சிறப்பு அபிஷேகம், மலர் அலங்காரம் மற்றும் பக்தர்களுக்குப் பிரசாத விநியோகம்.</p>
+                </div>
+                <div class="festival-card">
+                    <h3 data-ta="தீப ஒளி மற்றும் நவராத்திரி" data-en="Festival of Lights &amp; Navarathiri">தீப ஒளி மற்றும் நவராத்திரி</h3>
+                    <p><strong data-ta="மாதம்:" data-en="Month:">மாதம்:</strong> <span data-ta="புரட்டாசி / கார்த்திகை" data-en="Purattasi / Karthigai (Sep–Dec)">புரட்டாசி / கார்த்திகை</span></p>
+                    <p data-ta="திருவிளக்கு பூஜை, சிறப்பு சொற்பொழிவு மற்றும் கிராமத்தின் செழிப்புக்கான பிரார்த்தனைகள்." data-en="Lamp worship, special discourses and prayers for the prosperity of the village.">திருவிளக்கு பூஜை, சிறப்பு சொற்பொழிவு மற்றும் கிராமத்தின் செழிப்புக்கான பிரார்த்தனைகள்.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2 data-ta="புகைப்படங்கள் மற்றும் நிகழ்வுகள்" data-en="Photo Gallery &amp; Events">புகைப்படங்கள் மற்றும் நிகழ்வுகள்</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" tabindex="0" role="button" data-ta="கோயில் முகப்பு" data-en="Temple Entrance">கோயில் முகப்பு</div>
+                <div class="gallery-item" tabindex="0" role="button" data-ta="மூலவர் தரிசனம்" data-en="Presiding Deity Darshan">மூலவர் தரிசனம்</div>
+                <div class="gallery-item" tabindex="0" role="button" data-ta="திருவிழா நிகழ்வுகள்" data-en="Festival Events">திருவிழா நிகழ்வுகள்</div>
+                <div class="gallery-item" tabindex="0" role="button" data-ta="அன்னதானம்" data-en="Annadhanam (Free Meals)">அன்னதானம்</div>
+            </div>
+        </section>
+
+        <section id="donations">
+            <h2 data-ta="அன்னதானம் மற்றும் கோயில் திருப்பணி நன்கொடை" data-en="Annadhanam &amp; Temple Fund Donations">அன்னதானம் மற்றும் கோயில் திருப்பணி நன்கொடை</h2>
+            <div class="donation-box">
+                <p data-ta="சுகாம்பாளையம் திருக்கோயில் திருப்பணிகளுக்கும், திருவிழா மற்றும் அன்னதான நிகழ்வுகளுக்கும் நன்கொடை அளிக்க விரும்பும் பக்தர்கள் கீழே உள்ள வங்கி கணக்கில் அனுப்பலாம்:" data-en="Devotees wishing to contribute to temple renovations, festivals and the annadhanam programme may send donations to the bank account below:">சுகாம்பாளையம் திருக்கோயில் திருப்பணிகளுக்கும், திருவிழா மற்றும் அன்னதான நிகழ்வுகளுக்கும் நன்கொடை அளிக்க விரும்பும் பக்தர்கள் கீழே உள்ள வங்கி கணக்கில் அனுப்பலாம்:</p>
+                <p>
+                    <strong data-ta="வங்கி கணக்கு பெயர்:" data-en="Account name:">வங்கி கணக்கு பெயர்:</strong>
+                    <span data-ta="சுகாம்பாளையம் திருக்கோயில் அறக்கட்டளை" data-en="Sukampalaiyam Thirukkovil Trust">சுகாம்பாளையம் திருக்கோயில் அறக்கட்டளை</span>
+                    <button class="copy-btn" onclick="copyText('Sukampalaiyam Thirukkovil Trust')" data-ta="நகல்" data-en="Copy">நகல்</button><br>
+                    <strong data-ta="வங்கிப் பெயர்:" data-en="Bank name:">வங்கிப் பெயர்:</strong> [வங்கி பெயர்]<br>
+                    <strong data-ta="கணக்கு எண்:" data-en="Account number:">கணக்கு எண்:</strong> XXXXXXXXXXXXXXXX
+                    <button class="copy-btn" onclick="copyText('XXXXXXXXXXXXXXXX')" data-ta="நகல்" data-en="Copy">நகல்</button><br>
+                    <strong data-ta="IFSC குறியீடு:" data-en="IFSC code:">IFSC குறியீடு:</strong> XXXXX000XXXX
+                    <button class="copy-btn" onclick="copyText('XXXXX000XXXX')" data-ta="நகல்" data-en="Copy">நகல்</button>
+                </p>
+                <p><em data-ta="(UPI Payment / QR Code விரைவில் இணைக்கப்படும்)" data-en="(UPI payment / QR code will be added soon)">(UPI Payment / QR Code விரைவில் இணைக்கப்படும்)</em></p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 data-ta="தொடர்புகொள்ள மற்றும் அமைவிடம்" data-en="Contact &amp; Location">தொடர்புகொள்ள மற்றும் அமைவிடம்</h2>
+            <p><strong data-ta="முகவரி:" data-en="Address:">முகவரி:</strong> <span data-ta="அருள்மிகு திருக்கோயில், சுகாம்பாளையம் கிராமம், தமிழ்நாடு" data-en="Arulmigu Thirukkovil, Sukampalaiyam Village, Tamil Nadu">அருள்மிகு திருக்கோயில், சுகாம்பாளையம் கிராமம், தமிழ்நாடு</span></p>
+            <p><strong data-ta="தொடர்பு எண்கள்:" data-en="Contact numbers:">தொடர்பு எண்கள்:</strong></p>
+            <ul>
+                <li><span data-ta="கோயில் தர்மகர்த்தா / நிர்வாகி: " data-en="Temple trustee / manager: ">கோயில் தர்மகர்த்தா / நிர்வாகி: </span><a href="tel:+919876543210">+91 98765 43210</a></li>
+                <li><span data-ta="அர்ச்சகர் தொடர்பு எண்: " data-en="Priest contact: ">அர்ச்சகர் தொடர்பு எண்: </span><a href="tel:+919123456789">+91 91234 56789</a></li>
+            </ul>
+            <p><strong data-ta="WhatsApp / மின்னஞ்சல்:" data-en="WhatsApp / email:">WhatsApp / மின்னஞ்சல்:</strong>
+                <a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp</a> |
+                <a href="mailto:info@sukampalaiyamtemple.org">info@sukampalaiyamtemple.org</a></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 <span data-ta="அருள்மிகு சுகாம்பாளையம் திருக்கோயில்" data-en="Arulmigu Sukampalaiyam Thirukkovil">அருள்மிகு சுகாம்பாளையம் திருக்கோயில்</span>. <span data-ta="அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை." data-en="All rights reserved.">அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span></p>
+        <div class="social-links">
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <span class="lightbox-close" onclick="closeLightbox()" aria-label="Close" role="button" tabindex="0">×</span>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+    <script>
+        // ---- Language toggle (Tamil / English) ----
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-ta]').forEach(function (el) {
+                var v = el.getAttribute('data-' + lang);
+                if (v) el.textContent = v;
+            });
+            document.getElementById('btn-ta').classList.toggle('active', lang === 'ta');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            try { localStorage.setItem('temple-lang', lang); } catch (e) {}
+            document.title = lang === 'ta'
+                ? 'அருள்மிகு சுகாம்பாளையம் திருக்கோயில்'
+                : 'Arulmigu Sukampalaiyam Temple';
+            updateTempleStatus();
+        }
+
+        // ---- Gallery lightbox ----
+        function openLightbox(label) {
+            document.getElementById('lightbox-content').textContent = label;
+            document.getElementById('lightbox').classList.add('open');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+        }
+        document.querySelectorAll('.gallery-item').forEach(function (item) {
+            item.addEventListener('click', function () { openLightbox(item.textContent); });
+            item.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(item.textContent); }
+            });
+        });
+        document.getElementById('lightbox').addEventListener('click', function (e) {
+            if (e.target === e.currentTarget) closeLightbox();
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+
+        // ---- Copy-to-clipboard for donation details ----
+        function copyText(text) {
+            function fallback() {
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+            }
+            try {
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text).catch(fallback);
+                } else { fallback(); }
+            } catch (e) { fallback(); }
+        }
+
+        // ---- Temple open/closed status + countdown (IST) ----
+        function fmtDuration(m, ta) {
+            var h = Math.floor(m / 60), mm = m % 60;
+            var out = '';
+            if (h > 0) out += ta ? h + ' மணி நேரம் ' : h + 'h ';
+            return out + (ta ? mm + ' நிமிடம்' : mm + 'm');
+        }
+
+        function updateTempleStatus() {
+            var now = new Date();
+            var ist = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+            var mins = ist.getHours() * 60 + ist.getMinutes();
+            var windows = [
+                { open: 6 * 60, close: 12 * 60 },
+                { open: 16 * 60 + 30, close: 20 * 60 }
+            ];
+            var ta = (document.documentElement.lang || 'ta') === 'ta';
+            var statusEl = document.getElementById('open-status');
+            var cdEl = document.getElementById('open-countdown');
+            var openNow = false, nextOpen = null;
+
+            for (var i = 0; i < windows.length; i++) {
+                if (mins >= windows[i].open && mins < windows[i].close) {
+                    openNow = true;
+                    statusEl.textContent = ta ? '🟢 கோயில் தற்போது திறந்திருக்கிறது' : '🟢 The temple is OPEN now';
+                    cdEl.textContent = (ta ? 'நடை சாத்தப்படும் நேரம்: ' : 'Closes in: ') + fmtDuration(windows[i].close - mins, ta);
+                    break;
+                }
+            }
+            if (!openNow) {
+                for (var j = 0; j < windows.length; j++) {
+                    if (mins < windows[j].open) { nextOpen = windows[j].open; break; }
+                }
+                if (nextOpen === null) nextOpen = windows[0].open + 24 * 60; // tomorrow 6:00
+                statusEl.textContent = ta ? '🔴 கோயில் தற்போது மூடப்பட்டுள்ளது' : '🔴 The temple is CLOSED now';
+                cdEl.textContent = (ta ? 'மீண்டும் திறக்கும் நேரம்: ' : 'Reopens in: ') + fmtDuration(nextOpen - mins, ta);
+            }
+        }
+        updateTempleStatus();
+        setInterval(updateTempleStatus, 30000);
+
+        // ---- Nav active state on scroll + back-to-top ----
+        var sections = document.querySelectorAll('.container section');
+        var navLinks = document.querySelectorAll('nav a');
+        var backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function () {
+            var current = '';
+            sections.forEach(function (sec) {
+                if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+            });
+            navLinks.forEach(function (link) {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+            });
+            backToTop.classList.toggle('show', window.scrollY > 300);
+        }, { passive: true });
+
+        // ---- Scroll-reveal animation ----
+        var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (en.isIntersecting) {
+                    en.target.classList.add('visible');
+                    revealObserver.unobserve(en.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        sections.forEach(function (sec) { revealObserver.observe(sec); });
+
+        // ---- Restore saved language ----
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('temple-lang'); } catch (e) {}
+            if (saved && saved !== 'ta') setLanguage(saved);
+        })();
+    </script>
+</body>
+</html>
