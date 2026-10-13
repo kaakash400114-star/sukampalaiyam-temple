@@ -139,29 +139,46 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
         }
         .gallery-item {
-            background: linear-gradient(160deg, #fff3d6, #ffe9b8);
-            min-height: 150px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7a4a00;
-            font-weight: bold;
-            text-align: center;
-            padding: 10px;
-            border: 2px dashed #e0b84a;
+            position: relative;
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: #2b1d0c;
+            border: 2px solid #e0b84a;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
         }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
+        }
         .gallery-item:hover, .gallery-item:focus {
-            transform: scale(1.03);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            transform: scale(1.04);
+            box-shadow: 0 6px 18px rgba(139, 0, 0, 0.25);
             border-color: var(--secondary-color);
             outline: none;
+        }
+        .gallery-item:hover img, .gallery-item:focus img {
+            transform: scale(1.08);
+        }
+        .gallery-item .photo-badge {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            background: rgba(0,0,0,0.7);
+            color: var(--secondary-color);
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
         }
 
         .lightbox {
@@ -347,12 +364,26 @@
         </section>
 
         <section id="gallery">
-            <h2 data-ta="புகைப்படங்கள் மற்றும் நிகழ்வுகள்" data-en="Photo Gallery &amp; Events">புகைப்படங்கள் மற்றும் நிகழ்வுகள்</h2>
+            <h2 data-ta="புகைப்படங்கள் மற்றும் நிகழ்வுகள் (18 படங்கள்)" data-en="Photo Gallery &amp; Events (18 Photos)">புகைப்படங்கள் மற்றும் நிகழ்வுகள் (18 படங்கள்)</h2>
             <div class="gallery-grid">
-                <div class="gallery-item" tabindex="0" role="button" data-ta="கோயில் முகப்பு" data-en="Temple Entrance">கோயில் முகப்பு</div>
-                <div class="gallery-item" tabindex="0" role="button" data-ta="மூலவர் தரிசனம்" data-en="Presiding Deity Darshan">மூலவர் தரிசனம்</div>
-                <div class="gallery-item" tabindex="0" role="button" data-ta="திருவிழா நிகழ்வுகள்" data-en="Festival Events">திருவிழா நிகழ்வுகள்</div>
-                <div class="gallery-item" tabindex="0" role="button" data-ta="அன்னதானம்" data-en="Annadhanam (Free Meals)">அன்னதானம்</div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_01.jpg"><img src="images/temple_01.jpg" alt="திருக்கோயில் காட்சி 1" loading="lazy"><span class="photo-badge">1 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_02.jpg"><img src="images/temple_02.jpg" alt="திருக்கோயில் காட்சி 2" loading="lazy"><span class="photo-badge">2 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_03.jpg"><img src="images/temple_03.jpg" alt="திருக்கோயில் காட்சி 3" loading="lazy"><span class="photo-badge">3 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_04.jpg"><img src="images/temple_04.jpg" alt="திருக்கோயில் காட்சி 4" loading="lazy"><span class="photo-badge">4 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_05.jpg"><img src="images/temple_05.jpg" alt="திருக்கோயில் காட்சி 5" loading="lazy"><span class="photo-badge">5 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_06.jpg"><img src="images/temple_06.jpg" alt="திருக்கோயில் காட்சி 6" loading="lazy"><span class="photo-badge">6 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_07.jpg"><img src="images/temple_07.jpg" alt="திருக்கோயில் காட்சி 7" loading="lazy"><span class="photo-badge">7 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_08.jpg"><img src="images/temple_08.jpg" alt="திருக்கோயில் காட்சி 8" loading="lazy"><span class="photo-badge">8 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_09.jpg"><img src="images/temple_09.jpg" alt="திருக்கோயில் காட்சி 9" loading="lazy"><span class="photo-badge">9 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_10.jpg"><img src="images/temple_10.jpg" alt="திருக்கோயில் காட்சி 10" loading="lazy"><span class="photo-badge">10 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_11.jpg"><img src="images/temple_11.jpg" alt="திருக்கோயில் காட்சி 11" loading="lazy"><span class="photo-badge">11 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_12.jpg"><img src="images/temple_12.jpg" alt="திருக்கோயில் காட்சி 12" loading="lazy"><span class="photo-badge">12 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_13.jpg"><img src="images/temple_13.jpg" alt="திருக்கோயில் காட்சி 13" loading="lazy"><span class="photo-badge">13 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_14.jpg"><img src="images/temple_14.jpg" alt="திருக்கோயில் காட்சி 14" loading="lazy"><span class="photo-badge">14 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_15.jpg"><img src="images/temple_15.jpg" alt="திருக்கோயில் காட்சி 15" loading="lazy"><span class="photo-badge">15 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_16.jpg"><img src="images/temple_16.jpg" alt="திருக்கோயில் காட்சி 16" loading="lazy"><span class="photo-badge">16 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_17.jpg"><img src="images/temple_17.jpg" alt="திருக்கோயில் காட்சி 17" loading="lazy"><span class="photo-badge">17 / 18</span></div>
+                <div class="gallery-item" tabindex="0" role="button" data-img="images/temple_18.jpg"><img src="images/temple_18.jpg" alt="திருக்கோயில் காட்சி 18" loading="lazy"><span class="photo-badge">18 / 18</span></div>
             </div>
         </section>
 
@@ -400,8 +431,8 @@
     </footer>
 
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-        <span class="lightbox-close" onclick="closeLightbox()" aria-label="Close" role="button" tabindex="0">×</span>
-        <div class="lightbox-content" id="lightbox-content"></div>
+        <span class="lightbox-close" onclick="closeLightbox()" aria-label="Close" role="button" tabindex="0">&times;</span>
+        <img id="lightbox-img" src="" alt="Full view" style="max-width:92vw;max-height:85vh;border-radius:8px;border:3px solid var(--secondary-color);box-shadow:0 0 30px rgba(0,0,0,0.85);object-fit:contain;">
     </div>
 
     <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
@@ -424,17 +455,27 @@
         }
 
         // ---- Gallery lightbox ----
-        function openLightbox(label) {
-            document.getElementById('lightbox-content').textContent = label;
+        function openLightbox(src) {
+            var img = document.getElementById('lightbox-img');
+            if (img && src) img.src = src;
             document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
         }
         function closeLightbox() {
             document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = 'auto';
         }
         document.querySelectorAll('.gallery-item').forEach(function (item) {
-            item.addEventListener('click', function () { openLightbox(item.textContent); });
+            item.addEventListener('click', function () {
+                var src = item.getAttribute('data-img');
+                if (src) openLightbox(src);
+            });
             item.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(item.textContent); }
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    var src = item.getAttribute('data-img');
+                    if (src) openLightbox(src);
+                }
             });
         });
         document.getElementById('lightbox').addEventListener('click', function (e) {
