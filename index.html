@@ -1653,6 +1653,372 @@
             border-radius: 15px;
         }
 
+    
+        /* --- Today's Highlights & Daily Updates Section (User Requested) --- */
+        .today-highlights-section {
+            background: linear-gradient(180deg, #ffffff 0%, #fffdf8 50%, #fffaf0 100%);
+            border: 2px solid var(--gold);
+            border-radius: var(--radius-lg);
+            padding: 30px 28px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 30px rgba(120, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .today-highlights-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--gold) 0%, #780000 50%, var(--gold) 100%);
+        }
+        .today-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+            padding-bottom: 18px;
+        }
+        .today-title-wrap {
+            flex: 1 1 360px;
+        }
+        .today-badge {
+            display: inline-block;
+            background: #ffeac2;
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            border: 1px solid var(--gold-border);
+            letter-spacing: 0.3px;
+        }
+        .today-title-wrap h2 {
+            color: var(--primary);
+            font-size: 1.85rem;
+            margin: 0 0 6px 0;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+        .today-title-wrap p {
+            color: #555;
+            font-size: 0.98rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .today-date-badge-box {
+            background: linear-gradient(135deg, #780000 0%, #500000 100%);
+            color: #ffffff;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 4px 15px rgba(120, 0, 0, 0.2);
+            min-width: 270px;
+        }
+        .today-date-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+        .today-date-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .today-date-label {
+            font-size: 0.76rem;
+            color: var(--gold-light);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .today-dynamic-date {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 2px 0;
+        }
+        .today-dynamic-sub {
+            font-size: 0.78rem;
+            color: #ffd880;
+        }
+
+        .today-content-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.95fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        /* Left: Dedicated Pooja Card */
+        .today-pooja-card {
+            background: #ffffff;
+            border: 1px solid var(--gold-border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .pooja-status-badge {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 14px;
+            margin-bottom: 12px;
+        }
+        .pooja-status-badge.regular {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+        }
+        .pooja-status-badge.special {
+            background: #fff3e0;
+            color: #e65100;
+            border: 1px solid #ffcc80;
+        }
+        .pooja-status-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin: 0 0 10px 0;
+            font-weight: 800;
+            line-height: 1.35;
+        }
+        .pooja-time-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            background: #fffbf0;
+            border-left: 4px solid var(--gold);
+            padding: 10px 14px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 14px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #6d4200;
+        }
+        .pooja-status-desc {
+            color: #444;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            margin: 0 0 16px 0;
+        }
+        .pooja-timings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .time-box {
+            background: #faf7f0;
+            border: 1px solid #eadfc7;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 0.9rem;
+            color: #3b3024;
+        }
+        .time-box strong {
+            color: var(--primary);
+        }
+        .today-actions-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(0,0,0,0.1);
+        }
+        .today-btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            border: 1px solid var(--primary-dark);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .today-btn-primary:hover {
+            background: #500000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(120,0,0,0.25);
+        }
+        .today-btn-secondary {
+            background: #ffffff;
+            color: var(--primary);
+            border: 1px solid var(--gold);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .today-btn-secondary:hover {
+            background: #fff8e8;
+            transform: translateY(-2px);
+        }
+
+        /* Right: Clean Daily Photo Container */
+        .today-photo-container {
+            background: #ffffff;
+            border: 1px solid var(--gold-border);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+        }
+        .today-photo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .today-photo-header h3 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin: 0;
+            font-weight: 800;
+        }
+        .today-photo-sub {
+            font-size: 0.82rem;
+            color: #777;
+            display: block;
+        }
+        .photo-live-pill {
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-weight: 700;
+            font-size: 0.78rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            border: 1px solid #a5d6a7;
+        }
+        .today-photo-frame {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+            height: 270px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            margin-bottom: 14px;
+        }
+        .today-photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .today-photo-frame:hover img {
+            transform: scale(1.05);
+        }
+        .photo-hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            backdrop-filter: blur(2px);
+        }
+        .today-photo-frame:hover .photo-hover-overlay {
+            opacity: 1;
+        }
+        .today-photo-caption-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);
+            padding: 20px 14px 10px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .today-photo-note {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            background: #fffcf2;
+            border: 1px solid #edd9a8;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 0.85rem;
+            color: #554228;
+            margin-top: auto;
+        }
+        .today-photo-note p {
+            margin: 0;
+            line-height: 1.45;
+        }
+        .note-icon {
+            font-size: 1.1rem;
+            line-height: 1;
+            color: var(--gold);
+        }
+
+        .archive-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #4d0000, #780000);
+            color: var(--gold);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            border: 1px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 900px) {
+            .today-content-grid {
+                grid-template-columns: 1fr;
+            }
+            .today-photo-frame {
+                height: 240px;
+            }
+        }
+        @media (max-width: 600px) {
+            .today-highlights-section {
+                padding: 20px 16px;
+            }
+            .today-title-wrap h2 {
+                font-size: 1.45rem;
+            }
+            .today-date-badge-box {
+                width: 100%;
+                min-width: unset;
+            }
+            .pooja-timings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1696,6 +2062,7 @@
 
     <!-- Sticky Main Navigation -->
     <nav class="nav-bar" aria-label="Main Navigation">
+        <a href="#today-highlights" data-ta="🌟 இன்றைய நிகழ்வுகள்" data-en="🌟 Today's Highlights" style="background:rgba(212,175,55,0.18); font-weight:800; border:1px solid var(--gold); border-radius:20px; padding:6px 14px;">🌟 இன்றைய நிகழ்வுகள்</a>
         <a href="#interactive-carousel" onclick="goToSlide(0)" data-ta="🏛️ அறிமுகம்" data-en="🏛️ About">🏛️ அறிமுகம்</a>
         <a href="#interactive-carousel" onclick="goToSlide(1)" data-ta="⏰ தரிசன நேரங்கள்" data-en="⏰ Darshan Timings">⏰ தரிசன நேரங்கள்</a>
         <a href="#interactive-carousel" onclick="goToSlide(2)" data-ta="🪔 திருவிழாக்கள்" data-en="🪔 Festivals">🪔 திருவிழாக்கள்</a>
@@ -1737,6 +2104,84 @@
         <!-- USER INSTRUCTION FEATURE: SLIDE-BY-SLIDE CATEGORY CAROUSEL & COLUMNS -->
         <!-- "seperate coloums for each categoriey such as donation and next slide i turn it should be timings" -->
         <!-- =================================================================== -->
+        
+        <!-- =================================================================== -->
+        <!-- PROMINENT SECTION: TODAY'S HIGHLIGHTS & DAILY UPDATES -->
+        <!-- "இன்றைய நிகழ்வுகள் மற்றும் தரிசனம்" (User Requested Top Section) -->
+        <!-- =================================================================== -->
+        <section class="today-highlights-section" id="today-highlights" aria-label="Today's Highlights & Daily Darshan Updates">
+            <div class="today-section-header">
+                <div class="today-title-wrap">
+                    <span class="today-badge" data-ta="🔔 தினசரி ஆன்மீக அறிவிப்புகள் • Daily Darshan Bulletin" data-en="🔔 Daily Darshan Bulletin">🔔 தினசரி ஆன்மீக அறிவிப்புகள் • Daily Darshan Bulletin</span>
+                    <h2 data-ta="இன்றைய நிகழ்வுகள் மற்றும் தரிசனம்" data-en="Today's Highlights &amp; Daily Updates">
+                        இன்றைய நிகழ்வுகள் மற்றும் தரிசனம்
+                    </h2>
+                    <p data-ta="அருள்மிகு சுக்கம்பாளையம் திருக்கோயில்களின் இன்றைய தினசரி தரிசன நிலை, சிறப்பு அபிஷேக விபரம் மற்றும் நேரலை அலங்காரக் காட்சி" data-en="Daily darshan status, today's special pooja updates, and live sacred alankaram darshan of Sukkampalayam Temples">
+                        அருள்மிகு சுக்கம்பாளையம் திருக்கோயில்களின் இன்றைய தினசரி தரிசன நிலை, சிறப்பு அபிஷேக விபரம் மற்றும் நேரலை அலங்காரக் காட்சி
+                    </p>
+                </div>
+                <div class="today-date-badge-box">
+                    <div class="today-date-icon">📅</div>
+                    <div class="today-date-text">
+                        <span class="today-date-label" data-ta="இன்றைய தேதி & கிழமை" data-en="Today's Date">இன்றைய தேதி & கிழமை</span>
+                        <div class="today-dynamic-date" id="dynamicTodayDate">கணக்கிடப்படுகிறது...</div>
+                        <small class="today-dynamic-sub" id="dynamicTodaySub">சுக்கம்பாளையம் மங்கள நித்ய வழிபாடு</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="today-content-grid">
+                <!-- Left: Dedicated Card for Today's Pooja Details / Fallback -->
+                <div class="today-pooja-card" id="todayPoojaCard">
+                    <!-- Populated dynamically by JS (Tuesday, Friday, Saturday special poojas or regular fallback) -->
+                    <div class="today-pooja-inner" id="todayPoojaContent">
+                        <!-- Loaded dynamically -->
+                    </div>
+
+                    <div class="today-actions-bar">
+                        <button onclick="goToSlide(1)" class="today-btn-primary" data-ta="⏰ அனைத்து தரிசன நேரங்கள் காண்க" data-en="⏰ View All Darshan Timings">
+                            ⏰ அனைத்து தரிசன நேரங்கள் காண்க
+                        </button>
+                        <button onclick="goToSlide(9)" class="today-btn-secondary" data-ta="📝 இன்றைய அர்ச்சனை முன்பதிவு" data-en="📝 Book Pooja for Today">
+                            📝 இன்றைய அர்ச்சனை முன்பதிவு
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Clean Daily Photo Container / Placeholder -->
+                <div class="today-photo-container">
+                    <div class="today-photo-header">
+                        <div>
+                            <h3 data-ta="📸 இன்றைய தரிசனப் புகைப்படம்" data-en="📸 Today's Sacred Darshan Photo">
+                                📸 இன்றைய தரிசனப் புகைப்படம்
+                            </h3>
+                            <span class="today-photo-sub" data-ta="திருக்கோயில் தினசரி அலங்காரக் காட்சி" data-en="Daily Deity Alankaram Darshan">
+                                திருக்கோயில் தினசரி அலங்காரக் காட்சி
+                            </span>
+                        </div>
+                        <span class="photo-live-pill" data-ta="✨ இன்றைய தரிசனம்" data-en="✨ Today's Darshan">✨ இன்றைய தரிசனம்</span>
+                    </div>
+
+                    <div class="today-photo-frame" tabindex="0" role="button" onclick="showTodayPhotoModal()" aria-label="View Today's Full Darshan Photo">
+                        <img id="todayPhotoImg" src="images/temple_02.jpg" alt="இன்றைய அருள்மிகு பாலதண்டாயுதபாணி சுவாமி அலங்காரத் தரிசனம்" loading="lazy">
+                        <div class="photo-hover-overlay">
+                            <span data-ta="🔍 பெரிதாக்க கிளிக் செய்யவும்" data-en="🔍 Click to Enlarge">🔍 பெரிதாக்க கிளிக் செய்யவும்</span>
+                        </div>
+                        <div class="today-photo-caption-bar">
+                            <span id="todayPhotoCaption">அருள்மிகு பாலதண்டாயுதபாணி சுவாமி - இன்றைய பொன்னலங்கார மங்கள தரிசனம்</span>
+                        </div>
+                    </div>
+
+                    <div class="today-photo-note">
+                        <span class="note-icon">🔄</span>
+                        <p data-ta="காலை மற்றும் மாலை அபிஷேக அலங்காரத்திற்குப் பின் இன்றைய புதிய புகைப்படங்கள் இங்கு தொடர்ந்து உடனுக்குடன் புதுப்பிக்கப்படும்." data-en="Fresh daily deity alankaram photos are updated here immediately after morning and evening pooja sessions.">
+                            காலை மற்றும் மாலை அபிஷேக அலங்காரத்திற்குப் பின் இன்றைய புதிய புகைப்படங்கள் இங்கு தொடர்ந்து உடனுக்குடன் புதுப்பிக்கப்படும்.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="carousel-container" id="interactive-carousel">
             <div class="carousel-top-bar">
                 <div class="carousel-nav-tabs" role="tablist">
@@ -2363,13 +2808,16 @@
             <div class="category-slide" id="slide-7">
                 <div class="gallery-controls-bar">
                     <div>
-                        <h2 data-ta="சுக்கம்பாளையம் புகைப்படத் தொகுப்பு" data-en="Photo Gallery">சுக்கம்பாளையம் புகைப்படத் தொகுப்பு</h2>
-                        <p data-ta="கேமரா ரோலில் இருந்து நேரடியாகப் பெறப்பட்ட அரிய வண்ணப் புகைப்படங்கள் (பெரிதாக்க படத்தின் மேல் கிளிக் செய்யவும்)" data-en="High-resolution sacred photos straight from Camera Roll (Click on any photo to open full-screen lightbox)">
-                            கேமரா ரோலில் இருந்து நேரடியாகப் பெறப்பட்ட அரிய வண்ணப் புகைப்படங்கள் (பெரிதாக்க படத்தின் மேல் கிளிக் செய்யவும்)
+                        <div class="archive-banner">
+                            <span>🏛️ நிரந்தரத் திருவிழா ஆவணக் காப்பகம் & நினைவுகள் • Permanent Festival Archives</span>
+                        </div>
+                        <h2 data-ta="சுக்கம்பாளையம் புகைப்படத் தொகுப்பு • நிரந்தர ஆவணக் காப்பகம்" data-en="Photo Gallery • Permanent Festival Archives &amp; Memories">சுக்கம்பாளையம் புகைப்படத் தொகுப்பு • நிரந்தர ஆவணக் காப்பகம்</h2>
+                        <p data-ta="திருக்கோயிலின் மகா கும்பாபிஷேகம், திருவிழாக்கள் மற்றும் சன்னதிகளின் வரலாற்றுச் சிறப்புமிக்க நிரந்தரப் புகைப்பட ஆவணப் பதிவுகள் (பெரிதாக்க படத்தின் மேல் கிளிக் செய்யவும்)" data-en="Permanent historic photographic archives and memories of Maha Kumbhabhishekam, festivals, and sanctums (Click to view full screen)">
+                            திருக்கோயிலின் மகா கும்பாபிஷேகம், திருவிழாக்கள் மற்றும் சன்னதிகளின் வரலாற்றுச் சிறப்புமிக்க நிரந்தரப் புகைப்பட ஆவணப் பதிவுகள் (பெரிதாக்க படத்தின் மேல் கிளிக் செய்யவும்)
                         </p>
                     </div>
                     <div style="font-weight: 800; color: var(--primary);">
-                        📸 <span data-ta="வண்ணப் படங்கள்" data-en="Sacred Gallery">வண்ணப் படங்கள்</span>
+                        📸 <span data-ta="நிரந்தரப் புகைப்படங்கள்" data-en="Permanent Archives">நிரந்தரப் புகைப்படங்கள்</span>
                     </div>
                 </div>
 
@@ -2453,12 +2901,14 @@
 
             <div class="category-slide" id="slide-8">
                 <div class="section-header" style="margin-bottom:20px;">
-                    <h2 data-ta="சுக்கம்பாளையம் நேரடி வீடியோ தரிசனம்" data-en="Devotional Video Darshan">சுக்கம்பாளையம் நேரடி வீடியோ தரிசனம்</h2>
-                    <p data-ta="திருவிழா உற்சவங்கள், மங்கள தீபாராதனை மற்றும் வழிபாட்டுக் காட்சிகள் (கேமரா ரோலில் இருந்து)" data-en="Real video recordings of sacred rituals and processions from Camera Roll">
-                        திருவிழா உற்சவங்கள், மங்கள தீபாராதனை மற்றும் வழிபாட்டுக் காட்சிகள் (கேமரா ரோலில் இருந்து)
+                    <div class="archive-banner">
+                        <span>🎬 வரலாற்று பக்தி காணொளி ஆவணம் • Devotional Video Archives</span>
+                    </div>
+                    <h2 data-ta="சுக்கம்பாளையம் நேரடி வீடியோ தரிசனம் • வரலாற்று ஆவணக் காப்பகம்" data-en="Devotional Video Darshan • Permanent Audio-Visual Archives">சுக்கம்பாளையம் நேரடி வீடியோ தரிசனம் • வரலாற்று ஆவணக் காப்பகம்</h2>
+                    <p data-ta="திருவிழா உற்சவங்கள், மங்கள தீபாராதனை மற்றும் வழிபாட்டுக் காட்சிகள் (நிரந்தர பக்தி ஆவணக் காப்பகம் & நினைவுகள்)" data-en="Permanent historic video archives of sacred temple rituals, festival processions, and divine celebrations">
+                        திருவிழா உற்சவங்கள், மங்கள தீபாராதனை மற்றும் வழிபாட்டுக் காட்சிகள் (நிரந்தர பக்தி ஆவணக் காப்பகம் & நினைவுகள்)
                     </p>
                 </div>
-                <div class="videos-grid-4">
                     <div class="video-box">
                         <div class="video-player-wrap">
                             <video controls preload="metadata">
@@ -3051,7 +3501,181 @@
             var cached = null;
             try { cached = localStorage.getItem('sukkampalayam-lang'); } catch(e) {}
             if (cached && cached !== 'ta') changeLanguage(cached);
+        updateTodayHighlights();
         })();
+
+        
+        // ---- 10. Dynamic Today's Highlights & Daily Updates Handler ----
+        function updateTodayHighlights() {
+            var now = new Date();
+            var ist = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+            var day = ist.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, 3 = Wed, 4 = Thu, 5 = Fri, 6 = Sat
+            
+            var daysTa = ['ஞாயிற்றுக்கிழமை', 'திங்கட்கிழமை', 'செவ்வாய்க்கிழமை', 'புதன்கிழமை', 'வியாழக்கிழமை', 'வெள்ளிக்கிழமை', 'சனிக்கிழமை'];
+            var monthsTa = ['ஜனவரி', 'பிப்ரவரி', 'மார்ச்', 'ஏப்ரல்', 'மே', 'ஜூன்', 'ஜூலை', 'ஆகஸ்ட்', 'செப்டம்பர்', 'அக்டோபர்', 'நவம்பர்', 'டிசம்பர்'];
+            
+            var daysEn = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var monthsEn = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            var isTa = (document.documentElement.lang || 'ta') === 'ta';
+            
+            var dateEl = document.getElementById('dynamicTodayDate');
+            var subEl = document.getElementById('dynamicTodaySub');
+            
+            if (dateEl) {
+                if (isTa) {
+                    dateEl.textContent = daysTa[day] + ', ' + ist.getDate() + ' ' + monthsTa[ist.getMonth()] + ' ' + ist.getFullYear();
+                    if (subEl) subEl.textContent = 'சுக்கம்பாளையம் மங்கள நித்ய வழிபாடு';
+                } else {
+                    dateEl.textContent = daysEn[day] + ', ' + ist.getDate() + ' ' + monthsEn[ist.getMonth()] + ' ' + ist.getFullYear();
+                    if (subEl) subEl.textContent = 'Sukkampalayam Daily Sacred Darshan';
+                }
+            }
+
+            var poojaContainer = document.getElementById('todayPoojaContent');
+            if (!poojaContainer) return;
+
+            // Day-based schedule:
+            // Tuesday (2) = Senthil Andavar Abhishekam (6:30 AM)
+            // Friday (5) = Mahakaliyamman Abhishekam (6:30 AM)
+            // Saturday (6) = Kari Varadaraja Perumal Abhishekam (6:30 PM)
+            // Other days = Fallback: "இன்று வழக்கமான தினசரி பூஜைகள் நடைபெறுகின்றன"
+            if (day === 2) {
+                poojaContainer.innerHTML = isTa ? `
+                    <div class="pooja-status-badge special">✨ செவ்வாய்க்கிழமை சிறப்பு அபிஷேகம்</div>
+                    <h3 class="pooja-status-title">அருள்மிகு செந்தில் ஆண்டவர் சிறப்பு அபிஷேகம் & அலங்காரம்</h3>
+                    <div class="pooja-time-strip">
+                        <span>⏰ பூஜை நேரம்: காலை 6:30 மணி</span>
+                        <span>📍 சன்னதி: பாலதண்டாயுதபாணி திருக்கோயில்</span>
+                    </div>
+                    <p class="pooja-status-desc">
+                        வாரம் தோறும் செவ்வாய்க்கிழமை காலை 6:30 மணிக்கு அருள்மிகு செந்தில் ஆண்டவருக்கு விசேஷ அபிஷேக பூஜையும் அதனைத் தொடர்ந்து ராஜ அலங்கார மகா தீபாராதனையும் நடைபெறும்.
+                    </p>
+                    <div class="pooja-timings-grid">
+                        <div class="time-box"><strong>காலை நடை:</strong> 6:00 - 10:00 AM</div>
+                        <div class="time-box"><strong>மாலை நடை:</strong> 5:00 - 8:00 PM</div>
+                    </div>
+                ` : `
+                    <div class="pooja-status-badge special">✨ Tuesday Special Abhishekam</div>
+                    <h3 class="pooja-status-title">Lord Senthil Andavar Special Abhishekam & Alankaram</h3>
+                    <div class="pooja-time-strip">
+                        <span>⏰ Time: 6:30 AM Morning</span>
+                        <span>📍 Sanctum: Bala Dhandayuthapani Temple</span>
+                    </div>
+                    <p class="pooja-status-desc">
+                        Every Tuesday morning at 6:30 AM, sacred Abhishekam and Rajalankara Deeparadhana take place for Lord Senthil Andavar.
+                    </p>
+                    <div class="pooja-timings-grid">
+                        <div class="time-box"><strong>Morning:</strong> 6:00 - 10:00 AM</div>
+                        <div class="time-box"><strong>Evening:</strong> 5:00 - 8:00 PM</div>
+                    </div>
+                `;
+            } else if (day === 5) {
+                poojaContainer.innerHTML = isTa ? `
+                    <div class="pooja-status-badge special">🌸 வெள்ளிக்கிழமை சிறப்பு அபிஷேகம்</div>
+                    <h3 class="pooja-status-title">அருள்மிகு மாகாளியம்மன் சிறப்பு அபிஷேகம் & அலங்காரம்</h3>
+                    <div class="pooja-time-strip">
+                        <span>⏰ பூஜை நேரம்: காலை 6:30 மணி</span>
+                        <span>📍 சன்னதி: அருள்மிகு மாகாளியம்மன் திருக்கோயில்</span>
+                    </div>
+                    <p class="pooja-status-desc">
+                        வாரம் தோறும் வெள்ளிக்கிழமை காலை 6:30 மணிக்கு அருள்மிகு மாகாளியம்மனுக்குப் பால் அபிஷேக பூஜை, தீர்த்த அபிஷேகம் மற்றும் குங்கும புஷ்ப அலங்கார தீபாராதனை நடைபெறும்.
+                    </p>
+                    <div class="pooja-timings-grid">
+                        <div class="time-box"><strong>காலை நடை:</strong> 6:00 - 10:00 AM</div>
+                        <div class="time-box"><strong>மாலை நடை:</strong> 5:00 - 8:00 PM</div>
+                    </div>
+                ` : `
+                    <div class="pooja-status-badge special">🌸 Friday Special Abhishekam</div>
+                    <h3 class="pooja-status-title">Goddess Mahakaliyamman Special Abhishekam & Alankaram</h3>
+                    <div class="pooja-time-strip">
+                        <span>⏰ Time: 6:30 AM Morning</span>
+                        <span>📍 Sanctum: Arulmigu Mahakaliyamman Temple</span>
+                    </div>
+                    <p class="pooja-status-desc">
+                        Every Friday morning at 6:30 AM, holy Palabhishekam and special Kumkum flower alankaram are performed for Goddess Mahakaliyamman.
+                    </p>
+                    <div class="pooja-timings-grid">
+                        <div class="time-box"><strong>Morning:</strong> 6:00 - 10:00 AM</div>
+                        <div class="time-box"><strong>Evening:</strong> 5:00 - 8:00 PM</div>
+                    </div>
+                `;
+            } else if (day === 6) {
+                poojaContainer.innerHTML = isTa ? `
+                    <div class="pooja-status-badge special">🪔 சனிக்கிழமை சிறப்பு அபிஷேகம்</div>
+                    <h3 class="pooja-status-title">ஸ்ரீதேவி பூதேவி சமேத அருள்மிகு கரி வரதராஜ பெருமாள் அபிஷேகம்</h3>
+                    <div class="pooja-time-strip">
+                        <span>⏰ பூஜை நேரம்: மாலை 6:30 மணி</span>
+                        <span>📍 சன்னதி: கரி வரதராஜ பெருமாள் திருக்கோயில்</span>
+                    </div>
+                    <p class="pooja-status-desc">
+                        வாரம் தோறும் சனிக்கிழமை மாலை 6:30 மணிக்கு அருள்மிகு கரி வரதராஜ பெருமாளுக்குத் திரு மஞ்சனம், துளசி மாலை அலங்காரம் மற்றும் விசேஷ தீபாராதனை நடைபெறும்.
+                    </p>
+                    <div class="pooja-timings-grid">
+                        <div class="time-box"><strong>காலை நடை:</strong> 6:00 - 10:00 AM</div>
+                        <div class="time-box"><strong>மாலை நடை:</strong> 5:00 - 8:00 PM</div>
+                    </div>
+                ` : `
+                    <div class="pooja-status-badge special">🪔 Saturday Special Abhishekam</div>
+                    <h3 class="pooja-status-title">Lord Kari Varadaraja Perumal Sacred Abhishekam</h3>
+                    <div class="pooja-time-strip">
+                        <span>⏰ Time: 6:30 PM Evening</span>
+                        <span>📍 Sanctum: Kari Varadaraja Perumal Temple</span>
+                    </div>
+                    <p class="pooja-status-desc">
+                        Every Saturday evening at 6:30 PM, holy abhishekam and sacred Tulasi floral decoration are offered to Lord Kari Varadaraja Perumal.
+                    </p>
+                    <div class="pooja-timings-grid">
+                        <div class="time-box"><strong>Morning:</strong> 6:00 - 10:00 AM</div>
+                        <div class="time-box"><strong>Evening:</strong> 5:00 - 8:00 PM</div>
+                    </div>
+                `;
+            } else {
+                // Fallback: Sunday, Monday, Wednesday, Thursday
+                poojaContainer.innerHTML = isTa ? `
+                    <div class="pooja-status-badge regular">🪔 நித்ய தினசரி வழிபாடு</div>
+                    <h3 class="pooja-status-title">இன்று வழக்கமான தினசரி பூஜைகள் நடைபெறுகின்றன</h3>
+                    <div class="pooja-time-strip">
+                        <span>⏰ காலை 6:00 - 10:00 மணி | மாலை 5:00 - 8:00 மணி</span>
+                        <span>📍 அனைத்து சன்னதிகளும் திறந்திருக்கும்</span>
+                    </div>
+                    <p class="pooja-status-desc">
+                        திருக்கோயிலில் இன்று காலை மற்றும் மாலை வழக்கமான நித்ய கால பூஜைகள், நைவேத்தியம் மற்றும் மகா தீபாராதனைகள் சாஸ்திர முறைப்படி இனிதே நடைபெறுகின்றன. பக்தர்கள் அனைத்து சன்னதிகளிலும் சுவாமி தரிசனம் மற்றும் அர்ச்சனை செய்து கொள்ளலாம்.
+                    </p>
+                    <div class="pooja-timings-grid">
+                        <div class="time-box"><strong>காலை தரிசனம்:</strong> 6:00 - 10:00 AM</div>
+                        <div class="time-box"><strong>மாலை தரிசனம்:</strong> 5:00 - 8:00 PM</div>
+                    </div>
+                ` : `
+                    <div class="pooja-status-badge regular">🪔 Daily Regular Worship</div>
+                    <h3 class="pooja-status-title">Regular Daily Poojas are Taking Place Today</h3>
+                    <div class="pooja-time-strip">
+                        <span>⏰ Morning 6:00 - 10:00 AM | Evening 5:00 - 8:00 PM</span>
+                        <span>📍 All Sanctums are Open for Darshan</span>
+                    </div>
+                    <p class="pooja-status-desc">
+                        Regular daily pooja rituals, sacred offerings, and arati are being conducted as per traditional Agamic rituals. Devotees are warmly invited for darshan and archana across all sanctums.
+                    </p>
+                    <div class="pooja-timings-grid">
+                        <div class="time-box"><strong>Morning Darshan:</strong> 6:00 - 10:00 AM</div>
+                        <div class="time-box"><strong>Evening Darshan:</strong> 5:00 - 8:00 PM</div>
+                    </div>
+                `;
+            }
+        }
+
+        function showTodayPhotoModal() {
+            var imgEl = document.getElementById('todayPhotoImg');
+            var capEl = document.getElementById('todayPhotoCaption');
+            if (!imgEl) return;
+            document.getElementById('lbMainImg').src = imgEl.src;
+            document.getElementById('lbCaptionText').textContent = capEl ? capEl.textContent : 'அருள்மிகு சுக்கம்பாளையம் திருக்கோயில் இன்றைய அலங்காரத் திருக்காட்சி';
+            document.getElementById('galleryModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Initialize Today's Highlights
+        updateTodayHighlights();
 
         // ---- 9. Scroll Spy & Back to Top ----
         var topBtn = document.getElementById('backToTopPill');
