@@ -77,24 +77,6 @@
             text-align: center;
             flex-grow: 1;
         }
-        .bell-trigger-btn {
-            background: rgba(212, 175, 55, 0.2);
-            color: var(--gold-light);
-            border: 1px solid var(--gold);
-            padding: 4px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.82rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.25s ease;
-        }
-        .bell-trigger-btn:hover {
-            background: var(--gold-gradient);
-            color: #360000;
-        }
 
         /* --- Hero Slider Header --- */
         header.hero-slider {
@@ -1333,10 +1315,6 @@
             background: #25d366;
             color: #ffffff;
         }
-        .float-bell {
-            background: var(--primary);
-            color: var(--gold-light);
-        }
         .float-top {
             background: #360000;
             color: var(--gold-light);
@@ -1418,9 +1396,6 @@
     <div class="top-mantra-strip">
         <span>🕉️ சுக்கம்பாளையம் திருக்கோயில் 🕉️</span>
         <span class="mantra-center">"ஓம் நமச்சிவாய • லோகா சமஸ்தா சுகினோ பவந்து • அருள்மிகு சுக்கம்பாளையம் திருத்தலம்"</span>
-        <button class="bell-trigger-btn" onclick="ringTempleBell()" title="கோயில் மணி ஒலிக்கவும் / Ring Temple Bell">
-            🔔 <span>மணி ஒலிக்க</span>
-        </button>
     </div>
 
     <!-- Hero Slider with 4 Crossfading Camera Roll Images -->
@@ -1447,7 +1422,7 @@
                 சுக்கம்பாளையம் கிராமத்தின் அருள்நிறை ஆன்மீகத் தலம் • கிராமக் காவல் தெய்வத்தின் திருவடி சரணம்
             </p>
             <div class="hero-actions">
-                <button onclick="goToSlide(1)" class="btn-gold" data-ta="⏰ 5 கால பூஜை நேரங்கள்" data-en="⏰ 5 Pooja Sessions">⏰ 5 கால பூஜை நேரங்கள்</button>
+                <button onclick="goToSlide(1)" class="btn-gold" data-ta="⏰ தரிசன நேரங்கள்" data-en="⏰ 5 Pooja Sessions">⏰ தரிசன நேரங்கள்</button>
                 <button onclick="goToSlide(3)" class="btn-outline-gold" data-ta="🪙 அன்னதான நன்கொடை" data-en="🪙 Annadhanam & Donation">🪙 அன்னதான நன்கொடை</button>
                 <button onclick="goToSlide(6)" class="btn-outline-gold" data-ta="📸 18 புகைப்படங்கள் & வீடியோ" data-en="📸 18 Photos & Video">📸 18 புகைப்படங்கள் & வீடியோ</button>
             </div>
@@ -1457,7 +1432,7 @@
     <!-- Sticky Main Navigation -->
     <nav class="nav-bar" aria-label="Main Navigation">
         <a href="#interactive-carousel" onclick="goToSlide(0)" data-ta="🏛️ அறிமுகம்" data-en="🏛️ About">🏛️ அறிமுகம்</a>
-        <a href="#interactive-carousel" onclick="goToSlide(1)" data-ta="⏰ 5 கால பூஜைகள்" data-en="⏰ 5 Sessions">⏰ 5 கால பூஜைகள்</a>
+        <a href="#interactive-carousel" onclick="goToSlide(1)" data-ta="⏰ தரிசன நேரங்கள்" data-en="⏰ 5 Sessions">⏰ தரிசன நேரங்கள்</a>
         <a href="#interactive-carousel" onclick="goToSlide(2)" data-ta="🪔 திருவிழாக்கள்" data-en="🪔 Festivals">🪔 திருவிழாக்கள்</a>
         <a href="#interactive-carousel" onclick="goToSlide(3)" data-ta="🪙 நன்கொடை" data-en="🪙 Donation">🪙 நன்கொடை</a>
         <a href="#interactive-carousel" onclick="goToSlide(4)" data-ta="📞 தொடர்பு & வழி" data-en="📞 Contact">📞 தொடர்பு & வழி</a>
@@ -1500,7 +1475,7 @@
             <div class="carousel-top-bar">
                 <div class="carousel-nav-tabs" role="tablist">
                     <button class="c-tab-btn active" onclick="goToSlide(0)" id="tab-0">🏛️ அறிமுகம்</button>
-                    <button class="c-tab-btn" onclick="goToSlide(1)" id="tab-1">⏰ 5 கால பூஜைகள்</button>
+                    <button class="c-tab-btn" onclick="goToSlide(1)" id="tab-1">⏰ தரிசன நேரங்கள்</button>
                     <button class="c-tab-btn" onclick="goToSlide(2)" id="tab-2">🪔 திருவிழாக்கள்</button>
                     <button class="c-tab-btn" onclick="goToSlide(3)" id="tab-3">🪙 நன்கொடை & அன்னதானம்</button>
                     <button class="c-tab-btn" onclick="goToSlide(4)" id="tab-4">📞 தொடர்பு & வழிகாட்டி</button>
@@ -1640,119 +1615,63 @@
                 </div>
             </div>
 
-            <!-- SLIDE 2: 5 SESSIONS & DETAILED IMPORTANCE (USER REQUESTED: EACH SESSION & IMPORTANCE IN TAMIL) -->
+                        <!-- SLIDE 2: DARSHAN & TEMPLE TIMINGS (CLEAN & DIRECT SCHEDULE) -->
             <div class="category-slide" id="slide-1">
                 <div class="section-header" style="margin-bottom:20px;">
-                    <h2 data-ta="சுக்கம்பாளையம் திருக்கோயில்: 5 கால பூஜைகள் & ஆன்மீக முக்கியத்துவம்" data-en="5 Daily Pooja Sessions &amp; Sacred Importance">
-                        சுக்கம்பாளையம் திருக்கோயில்: 5 கால பூஜைகள் & ஆன்மீக முக்கியத்துவம்
+                    <h2 data-ta="சுக்கம்பாளையம் திருக்கோயில் தரிசன நேரங்கள்" data-en="Sukkampalayam Temple Darshan Timings">
+                        சுக்கம்பாளையம் திருக்கோயில் தரிசன நேரங்கள்
                     </h2>
-                    <p data-ta="ஆகம சாஸ்திர முறைப்படி தினசரி நடைபெறும் ஒவ்வொரு கால பூஜை மற்றும் அதன் பலன்கள்" data-en="Comprehensive Agamic significance and blessings of each daily worship session">
-                        ஆகம சாஸ்திர முறைப்படி தினசரி நடைபெறும் ஒவ்வொரு கால பூஜை மற்றும் அதன் பலன்கள்
+                    <p data-ta="பக்தர்கள் தரிசனம் செய்வதற்கான தினசரி காலை மற்றும் மாலை நடை நேர அட்டவணை" data-en="Daily morning and evening sanctum schedule for visiting devotees">
+                        பக்தர்கள் தரிசனம் செய்வதற்கான தினசரி காலை மற்றும் மாலை நடை நேர அட்டவணை
                     </p>
                 </div>
 
-                <div class="sessions-importance-grid">
-
-                    <!-- Session 1 -->
-                    <div class="session-card">
-                        <div class="session-header-row">
-                            <div class="session-title-wrap">
-                                <span class="session-badge-num">1</span>
-                                <h3 data-ta="திருப்பள்ளியெழுச்சி & உஷத்கால பூஜை" data-en="1. Ushathkala Pooja (Morning Awakening)">திருப்பள்ளியெழுச்சி & உஷத்கால பூஜை</h3>
-                            </div>
-                            <span class="session-time-pill">⏰ காலை 6:00 மணி</span>
+                <div class="timings-grid">
+                    <!-- Morning Box -->
+                    <div class="timing-box">
+                        <h3>☀️ <span data-ta="காலை தரிசன நேரங்கள்" data-en="Morning Darshan Hours">காலை தரிசன நேரங்கள்</span></h3>
+                        <div class="timing-line">
+                            <strong data-ta="நடை திறப்பு:" data-en="Sanctum Opens:">நடை திறப்பு:</strong>
+                            <span class="time-badge" data-ta="காலை 6:00 மணி" data-en="6:00 AM">காலை 6:00 மணி</span>
                         </div>
-                        <div class="session-body">
-                            <p data-ta="சூரிய உதயத்திற்கு முந்தைய பிரம்ம முகூர்த்தத்தின் நிறைவில் இறைவனைத் துயிலெழுப்பும் மங்களகரமான வழிபாடாகும். மங்கள வாத்தியங்கள் முழங்க, திருப்பள்ளியெழுச்சிப் பாடல்கள், சுப்ரபாதம் பாடப்பட்டு, கோ பூஜை (பசு வழிபாடு) முறைப்படி நடத்தப்படும்." data-en="Performed at dawn following Brahma Muhurtha. Divine hymns and nadaswaram awaken the sanctum along with Go-Puja (sacred cow veneration).">
-                                சூரிய உதயத்திற்கு முந்தைய பிரம்ம முகூர்த்தத்தின் நிறைவில் இறைவனைத் துயிலெழுப்பும் மங்களகரமான வழிபாடாகும். மங்கள வாத்தியங்கள் முழங்க, திருப்பள்ளியெழுச்சிப் பாடல்கள், சுப்ரபாதம் பாடப்பட்டு, கோ பூஜை (பசு வழிபாடு) முறைப்படி நடத்தப்படும்.
-                            </p>
-                            <div class="session-importance-box">
-                                <strong data-ta="🕉️ உஷத்கால பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:" data-en="🕉️ Spiritual Importance &amp; Blessings:">🕉️ உஷத்கால பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:</strong>
-                                <span data-ta="விடியற்காலையில் இறைவனின் முதல் திருமுகத்தைத் தரிசிப்பதால் மன அழுத்தம் நீங்கி, நாள் முழுவதும் புத்துணர்ச்சியும் உற்சாகமும் உண்டாகும். குடும்பத்தில் வறுமையும் தோஷங்களும் விலகி சர்வ மங்களம் உண்டாகும் என்பது ஐதீகம்." data-en="Witnessing the first darshan of the day dispels negative energies, purifies thoughts, and fills the home with enduring auspiciousness.">விடியற்காலையில் இறைவனின் முதல் திருமுகத்தைத் தரிசிப்பதால் மன அழுத்தம் நீங்கி, நாள் முழுவதும் புத்துணர்ச்சியும் உற்சாகமும் உண்டாகும். குடும்பத்தில் வறுமையும் தோஷங்களும் விலகி சர்வ மங்களம் உண்டாகும் என்பது ஐதீகம்.</span>
-                            </div>
+                        <div class="timing-line">
+                            <strong data-ta="காலை அபிஷேகம் & வழிபாடு:" data-en="Morning Abhishekam:">காலை அபிஷேகம் & வழிபாடு:</strong>
+                            <span class="time-badge" data-ta="காலை 7:30 மணி" data-en="7:30 AM">காலை 7:30 மணி</span>
                         </div>
-                    </div>
-
-                    <!-- Session 2 -->
-                    <div class="session-card">
-                        <div class="session-header-row">
-                            <div class="session-title-wrap">
-                                <span class="session-badge-num">2</span>
-                                <h3 data-ta="காலசந்தி பூஜை & மகா அபிஷேகம்" data-en="2. Kalasandhi Pooja &amp; Abhishekam">காலசந்தி பூஜை & மகா அபிஷேகம்</h3>
-                            </div>
-                            <span class="session-time-pill">⏰ காலை 7:30 - 8:30 மணி</span>
+                        <div class="timing-line">
+                            <strong data-ta="பக்தர்கள் தரிசனம்:" data-en="Devotee Darshan:">பக்தர்கள் தரிசனம்:</strong>
+                            <span class="time-badge" data-ta="காலை 8:00 - 11:30 மணி" data-en="8:00 - 11:30 AM">காலை 8:00 - 11:30 மணி</span>
                         </div>
-                        <div class="session-body">
-                            <p data-ta="சூரிய பகவான் தன் கிரணங்களைப் பரப்பும் காலை வேளையில் மூலவருக்குப் பால், பன்னீர், சந்தனம், இளநீர், தேன் மற்றும் புனித தீர்த்தங்கள் கொண்டு வேத மந்திரங்கள் முழங்க மகா அபிஷேகம் நடைபெறும். பின்னர் புத்தாடை, நறுமண மலர் மாலைகள் அணிவித்து காலசந்தி தீபாராதனை காட்டப்படும்." data-en="Conducted as morning light fills the earth. The deity is bathed in milk, tender coconut, rosewater, and sandalwood paste amidst sacred Vedic chants.">
-                                சூரிய பகவான் தன் கிரணங்களைப் பரப்பும் காலை வேளையில் மூலவருக்குப் பால், பன்னீர், சந்தனம், இளநீர், தேன் மற்றும் புனித தீர்த்தங்கள் கொண்டு வேத மந்திரங்கள் முழங்க மகா அபிஷேகம் நடைபெறும். பின்னர் புத்தாடை, நறுமண மலர் மாலைகள் அணிவித்து காலசந்தி தீபாராதனை காட்டப்படும்.
-                            </p>
-                            <div class="session-importance-box">
-                                <strong data-ta="🕉️ காலசந்தி பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:" data-en="🕉️ Spiritual Importance &amp; Blessings:">🕉️ காலசந்தி பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:</strong>
-                                <span data-ta="காலசந்தி அபிஷேகத் தீர்த்தத்தை அருந்துவதும், தரிசனம் செய்வதும் தீராத நோய்களைக் குணமாக்கும்; ஆயுள் பலம் பெருகும்; புதிய முயற்சிகள், தொழில்கள் மற்றும் விவசாயப் பணிகள் தடையின்றி வெற்றியடையும்." data-en="Kalasandhi worship promotes vitality, cures persistent physical ailments, and bestows success in all ventures, trade and agricultural endeavors.">காலசந்தி அபிஷேகத் தீர்த்தத்தை அருந்துவதும், தரிசனம் செய்வதும் தீராத நோய்களைக் குணமாக்கும்; ஆயுள் பலம் பெருகும்; புதிய முயற்சிகள், தொழில்கள் மற்றும் விவசாயப் பணிகள் தடையின்றி வெற்றியடையும்.</span>
-                            </div>
+                        <div class="timing-line">
+                            <strong data-ta="நண்பகல் நடை சாத்துதல்:" data-en="Noon Closing:">நண்பகல் நடை சாத்துதல்:</strong>
+                            <span class="time-badge" data-ta="மதியம் 12:00 மணி" data-en="12:00 PM">மதியம் 12:00 மணி</span>
                         </div>
                     </div>
 
-                    <!-- Session 3 -->
-                    <div class="session-card">
-                        <div class="session-header-row">
-                            <div class="session-title-wrap">
-                                <span class="session-badge-num">3</span>
-                                <h3 data-ta="உச்சிகால பூஜை & அன்ன நைவேத்தியம்" data-en="3. Uchikala Pooja (Noon Worship)">உச்சிகால பூஜை & அன்ன நைவேத்தியம்</h3>
-                            </div>
-                            <span class="session-time-pill">⏰ நண்பகல் 11:30 - 12:00 மணி</span>
+                    <!-- Evening Box -->
+                    <div class="timing-box">
+                        <h3>🌙 <span data-ta="மாலை தரிசன நேரங்கள்" data-en="Evening Darshan Hours">மாலை தரிசன நேரங்கள்</span></h3>
+                        <div class="timing-line">
+                            <strong data-ta="மாலை நடை திறப்பு:" data-en="Evening Re-opens:">மாலை நடை திறப்பு:</strong>
+                            <span class="time-badge" data-ta="மாலை 4:30 மணி" data-en="4:30 PM">மாலை 4:30 மணி</span>
                         </div>
-                        <div class="session-body">
-                            <p data-ta="நண்பகலில் சூரியன் உச்சியில் திகழும் வேளையில் செய்யப்படும் வழிபாடு. மூலவருக்கு சர்க்கரைப் பொங்கல், சுவையான அன்ன நைவேத்தியங்கள் படைக்கப்பட்டு, மகா தீப ஆராதனை காட்டப்பட்டு பகல் நடை சாத்தப்படும்." data-en="Performed at noon when the sun is at its zenith. Sweet pongal and sacred rice offerings are presented to the deity followed by grand noon Aarti.">
-                                நண்பகலில் சூரியன் உச்சியில் திகழும் வேளையில் செய்யப்படும் வழிபாடு. மூலவருக்கு சர்க்கரைப் பொங்கல், சுவையான அன்ன நைவேத்தியங்கள் படைக்கப்பட்டு, மகா தீப ஆராதனை காட்டப்பட்டு பகல் நடை சாத்தப்படும்.
-                            </p>
-                            <div class="session-importance-box">
-                                <strong data-ta="🕉️ உச்சிகால பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:" data-en="🕉️ Spiritual Importance &amp; Blessings:">🕉️ உச்சிகால பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:</strong>
-                                <span data-ta="உச்சிகால தரிசனம் தரித்திரம் மற்றும் வறுமையைப் போக்கும். பசிப்பிணி நீங்கி வீடுகளில் தானிய விருத்தியும், தன லாபமும் பெருகும்; பித்ருக்களின் ஆசியும் கிடைக்கும்." data-en="Uchikala darshan banishes poverty and brings bountiful food, financial abundance, and ancestral blessings to the household.">உச்சிகால தரிசனம் தரித்திரம் மற்றும் வறுமையைப் போக்கும். பசிப்பிணி நீங்கி வீடுகளில் தானிய விருத்தியும், தன லாபமும் பெருகும்; பித்ருக்களின் ஆசியும் கிடைக்கும்.</span>
-                            </div>
+                        <div class="timing-line">
+                            <strong data-ta="சாயரட்சை தீபாராதனை:" data-en="Evening Deeparadhana:">சாயரட்சை தீபாராதனை:</strong>
+                            <span class="time-badge" data-ta="மாலை 6:30 மணி" data-en="6:30 PM">மாலை 6:30 மணி</span>
                         </div>
-                    </div>
-
-                    <!-- Session 4 -->
-                    <div class="session-card">
-                        <div class="session-header-row">
-                            <div class="session-title-wrap">
-                                <span class="session-badge-num">4</span>
-                                <h3 data-ta="சாயரட்சை பூஜை & மகா தீபாராதனை" data-en="4. Sayarakshai Pooja (Twilight Aarti)">சாயரட்சை பூஜை & மகா தீபாராதனை</h3>
-                            </div>
-                            <span class="session-time-pill">⏰ மாலை 6:00 - 6:30 மணி</span>
+                        <div class="timing-line">
+                            <strong data-ta="பக்தர்கள் அர்ச்சனை நேரம்:" data-en="Archana Time:">பக்தர்கள் அர்ச்சனை நேரம்:</strong>
+                            <span class="time-badge" data-ta="மாலை 6:45 - 7:45 மணி" data-en="6:45 - 7:45 PM">மாலை 6:45 - 7:45 மணி</span>
                         </div>
-                        <div class="session-body">
-                            <p data-ta="பகலும் இரவும் சங்கமிக்கும் சந்தியா கால அந்தி வேளையில் நடைபெறும் மிக உன்னதமான பூஜை. திருக்கோயில் முழுவதும் நெய் தீபங்கள் ஏற்றப்பட்டு, சங்கு, மணி, வாத்தியங்கள் முழங்க மூலவருக்கு மகா கற்பூர ஆரத்தி காட்டப்படும்." data-en="Celebrated during the sacred sandhya (dusk) transition. The entire temple is lit with traditional oil lamps and camphor aarti is accompanied by the resonance of sacred temple conches and bells.">
-                                பகலும் இரவும் சங்கமிக்கும் சந்தியா கால அந்தி வேளையில் நடைபெறும் மிக உன்னதமான பூஜை. திருக்கோயில் முழுவதும் நெய் தீபங்கள் ஏற்றப்பட்டு, சங்கு, மணி, வாத்தியங்கள் முழங்க மூலவருக்கு மகா கற்பூர ஆரத்தி காட்டப்படும்.
-                            </p>
-                            <div class="session-importance-box">
-                                <strong data-ta="🕉️ சாயரட்சை பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:" data-en="🕉️ Spiritual Importance &amp; Blessings:">🕉️ சாயரட்சை பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:</strong>
-                                <span data-ta="அந்தி வேளையில் இறைவனைத் தரிசிப்பது கோடி புண்ணியத்தைத் தரும். கண் திருஷ்டி, பில்லி, சூனியம் போன்ற தீய சக்திகள் விலகும்; மகாலட்சுமி வாசம் செய்து குடும்பத்தில் அமைதியையும் மங்களத்தையும் அருளுவாள்." data-en="Evening twilight darshan eliminates negative vibrations, wards off the evil eye, and welcomes Goddess Mahalakshmi's prosperity into the home.">அந்தி வேளையில் இறைவனைத் தரிசிப்பது கோடி புண்ணியத்தைத் தரும். கண் திருஷ்டி, பில்லி, சூனியம் போன்ற தீய சக்திகள் விலகும்; மகாலட்சுமி வாசம் செய்து குடும்பத்தில் அமைதியையும் மங்களத்தையும் அருளுவாள்.</span>
-                            </div>
+                        <div class="timing-line">
+                            <strong data-ta="இரவு நடை சாத்துதல்:" data-en="Night Closing:">இரவு நடை சாத்துதல்:</strong>
+                            <span class="time-badge" data-ta="இரவு 8:00 மணி" data-en="8:00 PM">இரவு 8:00 மணி</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Session 5 -->
-                    <div class="session-card">
-                        <div class="session-header-row">
-                            <div class="session-title-wrap">
-                                <span class="session-badge-num">5</span>
-                                <h3 data-ta="அர்த்தஜாம பூஜை & பள்ளியறை சேவை" data-en="5. Ardhajama Pooja (Night Closing)">அர்த்தஜாம பூஜை & பள்ளியறை சேவை</h3>
-                            </div>
-                            <span class="session-time-pill">⏰ இரவு 7:45 - 8:00 மணி</span>
-                        </div>
-                        <div class="session-body">
-                            <p data-ta="அன்றைய நாளின் நிறைவு பூஜை. அனைத்து உலக உயிர்களும் இன்புற்று வாழவும், அமைதியாக உறங்கவும் பிரார்த்தித்து, மூலவருக்கு பால், உலர் பழங்கள் நைவேத்தியம் செய்து, மென்மையான தீபாராதனையுடன் திருக்காப்பிடப்படும் (நடை சாத்தப்படும்)." data-en="The tranquil closing ritual of the day. Warm milk and fruits are offered with gentle aarti, praying for the peace and restful slumber of all living beings.">
-                                அன்றைய நாளின் நிறைவு பூஜை. அனைத்து உலக உயிர்களும் இன்புற்று வாழவும், அமைதியாக உறங்கவும் பிரார்த்தித்து, மூலவருக்கு பால், உலர் பழங்கள் நைவேத்தியம் செய்து, மென்மையான தீபாராதனையுடன் திருக்காப்பிடப்படும் (நடை சாத்தப்படும்).
-                            </p>
-                            <div class="session-importance-box">
-                                <strong data-ta="🕉️ அர்த்தஜாம பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:" data-en="🕉️ Spiritual Importance &amp; Blessings:">🕉️ அர்த்தஜாம பூஜையின் சாஸ்திர முக்கியத்துவம் & பலன்கள்:</strong>
-                                <span data-ta="அர்த்தஜாம வழிபாட்டைத் தரிசிப்பதால் கெட்ட கனவுகள், மரண பயம், தூக்கமின்மை நீங்கும்; ஆழ்ந்த மன அமைதியும், மறுநாள் காரியங்களுக்கான இறையருளும் கிடைக்கும்." data-en="Protects against nightmares and anxiety, granting peaceful sleep, mental clarity, and divine guidance for the morrow.">அர்த்தஜாம வழிபாட்டைத் தரிசிப்பதால் கெட்ட கனவுகள், மரண பயம், தூக்கமின்மை நீங்கும்; ஆழ்ந்த மன அமைதியும், மறுநாள் காரியங்களுக்கான இறையருளும் கிடைக்கும்.</span>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="about-quote" style="margin-top:25px;" data-ta="«விசேஷ நாட்கள்: செவ்வாய்க்கிழமை, வெள்ளிக்கிழமை, பௌர்ணமி, அமாவாசை மற்றும் பிரதோஷ நாட்களில் சிறப்பு வழிபாடுகள் நடைபெறும்»" data-en="«Special poojas are conducted on Tuesdays, Fridays, Pournami, Amavasai, and Pradosham days»">
+                    «விசேஷ நாட்கள்: செவ்வாய்க்கிழமை, வெள்ளிக்கிழமை, பௌர்ணமி, அமாவாசை மற்றும் பிரதோஷ நாட்களில் சிறப்பு வழிபாடுகள் நடைபெறும்»
                 </div>
             </div>
 
@@ -2269,8 +2188,8 @@
                     <div>
                         <span class="pillar-icon">⏰</span>
                         <h3 data-ta="தரிசன நேரங்கள்" data-en="Pooja Timings">தரிசன நேரங்கள்</h3>
-                        <p data-ta="தினசரி காலை மற்றும் மாலை வேளைகளில் நடை திறக்கப்பட்டு 5 கால பூஜைகள் மற்றும் மகா தீபாராதனைகள் நடைபெறுகின்றன." data-en="Sanctum opens daily for 5 auspicious pooja sessions with Agamic rituals and deeparadhana.">
-                            தினசரி காலை மற்றும் மாலை வேளைகளில் நடை திறக்கப்பட்டு 5 கால பூஜைகள் மற்றும் மகா தீபாராதனைகள் நடைபெறுகின்றன.
+                        <p data-ta="தினசரி காலை மற்றும் மாலை வேளைகளில் நடை திறக்கப்பட்டு தரிசன பூஜைகள் மற்றும் மகா தீபாராதனைகள் நடைபெறுகின்றன." data-en="Sanctum opens daily for 5 auspicious pooja sessions with Agamic rituals and deeparadhana.">
+                            தினசரி காலை மற்றும் மாலை வேளைகளில் நடை திறக்கப்பட்டு தரிசன பூஜைகள் மற்றும் மகா தீபாராதனைகள் நடைபெறுகின்றன.
                         </p>
                         <ul>
                             <li><strong data-ta="காலை நடை:" data-en="Morning:">காலை நடை:</strong> 6:00 AM - 12:00 PM</li>
@@ -2278,7 +2197,7 @@
                             <li><strong data-ta="சாயரட்சை பூஜை:" data-en="Sayarakshai:">சாயரட்சை பூஜை:</strong> 6:00 PM - 6:30 PM</li>
                         </ul>
                     </div>
-                    <button onclick="goToSlide(1)" class="pillar-btn" data-ta="5 கால முக்கியத்துவம் →" data-en="5 Sessions Details →">5 கால முக்கியத்துவம் →</button>
+                    <button onclick="goToSlide(1)" class="pillar-btn" data-ta="தரிசன நேரங்கள் →" data-en="5 Sessions Details →">தரிசன நேரங்கள் →</button>
                 </div>
 
                 <!-- Col 3: Festivals -->
@@ -2405,9 +2324,6 @@
         <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="float-btn float-whatsapp" title="WhatsApp உதவி / Helpdesk" aria-label="WhatsApp">
             💬
         </a>
-        <button class="float-btn float-bell" onclick="ringTempleBell()" title="கோயில் மணி ஒலிக்கவும் / Ring Bell" aria-label="Ring Temple Bell">
-            🔔
-        </button>
         <button class="float-btn float-top" id="backToTopPill" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="மேலே செல்ல / Back to Top" aria-label="Back to Top">
             ↑
         </button>
@@ -2471,44 +2387,6 @@
             slides[heroSlideIndex].classList.add('active');
         }
         setInterval(cycleHeroSlides, 5000);
-
-        // ---- 3. Web Audio Temple Bell Ring (100% Offline, Synthesized Bell Sound) ----
-        var audioCtx = null;
-        function ringTempleBell() {
-            try {
-                if (!audioCtx) {
-                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                }
-                if (audioCtx.state === 'suspended') {
-                    audioCtx.resume();
-                }
-                var now = audioCtx.currentTime;
-
-                // Create harmonic oscillators simulating a temple bell / brass chime
-                var freqs = [698, 1046, 1396, 2093];
-                var gains = [0.4, 0.25, 0.15, 0.1];
-
-                freqs.forEach(function(freq, i) {
-                    var osc = audioCtx.createOscillator();
-                    var gain = audioCtx.createGain();
-
-                    osc.type = (i % 2 === 0) ? 'sine' : 'triangle';
-                    osc.frequency.setValueAtTime(freq, now);
-                    gain.gain.setValueAtTime(gains[i], now);
-                    gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.8);
-
-                    osc.connect(gain);
-                    gain.connect(audioCtx.destination);
-
-                    osc.start(now);
-                    osc.stop(now + 2.9);
-                });
-
-                showToast('🔔 சுக்கம்பாளையம் திருக்கோயில் மணி ஒலித்தது!');
-            } catch(e) {
-                showToast('🔔 மணி ஒலித்தது!');
-            }
-        }
 
         // ---- 4. Interactive Gallery Lightbox ----
         var galleryTiles = document.querySelectorAll('.gallery-tile');
