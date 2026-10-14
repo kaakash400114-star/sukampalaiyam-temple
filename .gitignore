@@ -1,0 +1,19 @@
+# Environment variables and sensitive secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.token
+*.secret
+
+# OS & Editor artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node / Build artifacts
+node_modules/
+dist/
+build/
