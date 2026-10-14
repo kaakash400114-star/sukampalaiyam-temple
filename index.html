@@ -1388,6 +1388,156 @@
                 font-size: 0.82rem;
             }
         }
+    
+        /* --- Daily & Weekly Timings Enhancements --- */
+        .timings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin-top: 15px;
+        }
+        @media (max-width: 768px) {
+            .timings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .timing-box {
+            background: linear-gradient(135deg, #fffdf8 0%, #fff7ea 100%);
+            border: 1px solid var(--gold-border);
+            border-left: 6px solid var(--primary);
+            border-radius: var(--radius-md);
+            padding: 22px 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .timing-box h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 14px;
+            border-bottom: 1px solid #eee1cb;
+            padding-bottom: 8px;
+        }
+        .timing-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+        }
+        .time-badge {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .weekly-pooja-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .weekly-day-card {
+            background: #ffffff;
+            border: 1px solid var(--gold-border);
+            border-top: 4px solid var(--gold);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.25s ease;
+        }
+        .weekly-day-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(120,0,0,0.08);
+        }
+        .weekly-day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f2e6d6;
+            padding-bottom: 8px;
+        }
+        .day-badge {
+            background: #780000;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+        .time-pill {
+            background: #fff3d6;
+            color: #573300;
+            border: 1px solid var(--gold);
+            font-size: 0.88rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+        .weekly-day-card h4 {
+            color: var(--primary);
+            font-size: 1.18rem;
+            margin-bottom: 8px;
+        }
+        .weekly-day-card p {
+            font-size: 0.94rem;
+            color: #4a4a4a;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .vrat-special-box {
+            margin-top: 25px;
+            background: linear-gradient(135deg, #360000 0%, #680000 100%);
+            color: #ffffff;
+            border: 2px solid var(--gold);
+            border-radius: var(--radius-md);
+            padding: 24px 28px;
+            box-shadow: 0 8px 25px rgba(54,0,0,0.25);
+        }
+        .vrat-special-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 14px;
+            border-bottom: 1px solid rgba(212,175,55,0.4);
+            padding-bottom: 12px;
+        }
+        .vrat-badge {
+            background: var(--gold-gradient);
+            color: #360000;
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+        .vrat-special-header h3 {
+            color: var(--gold-light);
+            font-size: 1.35rem;
+            margin: 0;
+        }
+        .vrat-time-highlight {
+            background: var(--gold);
+            color: #360000;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 8px 18px;
+            border-radius: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .vrat-special-box p {
+            color: #f7e6e6;
+            font-size: 1.02rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -1418,8 +1568,8 @@
             <h1 class="hero-title" data-ta="அருள்மிகு சுக்கம்பாளையம் திருக்கோயில்" data-en="Arulmigu Sukkampalayam Temple">
                 அருள்மிகு சுக்கம்பாளையம் திருக்கோயில்
             </h1>
-            <p class="hero-sub" data-ta="சுக்கம்பாளையம் கிராமத்தின் அருள்நிறை ஆன்மீகத் தலம் • அருள்மிகு பாலதண்டாயுதபாணி சுவாமி, செல்வ விநாயகர், மகா மாரியம்மன் & வரதராஜப் பெருமாள் திருக்கோயில்" data-en="The Sacred Spiritual Haven of Sukkampalayam Village • Divine Abode of Lord Bala Dhandayuthapani, Selva Vinayakar, Maha Mariamman & Varadaraja Perumal">
-                சுக்கம்பாளையம் கிராமத்தின் அருள்நிறை ஆன்மீகத் தலம் • அருள்மிகு பாலதண்டாயுதபாணி சுவாமி, செல்வ விநாயகர், மகா மாரியம்மன் & வரதராஜப் பெருமாள் திருக்கோயில்
+            <p class="hero-sub" data-ta="சுக்கம்பாளையம் கிராமத்தின் அருள்நிறை ஆன்மீகத் தலம் • அருள்மிகு பாலதண்டாயுதபாணி சுவாமி, செல்வ விநாயகர், மகா மாரியம்மன் & கரி வரதராஜ பெருமாள் திருக்கோயில்" data-en="The Sacred Spiritual Haven of Sukkampalayam Village • Divine Abode of Lord Bala Dhandayuthapani, Selva Vinayakar, Maha Mariamman & Varadaraja Perumal">
+                சுக்கம்பாளையம் கிராமத்தின் அருள்நிறை ஆன்மீகத் தலம் • அருள்மிகு பாலதண்டாயுதபாணி சுவாமி, செல்வ விநாயகர், மகா மாரியம்மன் & கரி வரதராஜ பெருமாள் திருக்கோயில்
             </p>
             <div class="hero-actions">
                 <button onclick="goToSlide(1)" class="btn-gold" data-ta="⏰ தரிசன நேரங்கள்" data-en="⏰ 5 Pooja Sessions">⏰ தரிசன நேரங்கள்</button>
@@ -1562,7 +1712,7 @@
                             <span class="session-time-pill">திருப்பணிக் காலம்</span>
                         </div>
                         <div class="session-body">
-                            <p data-ta="சுக்கம்பாளையம் கிராம மக்களின் அளப்பரிய பக்தியினாலும், ஒற்றுமையினாலும் எளிய மேடையாக இருந்த ஆலயம் பின்னர் கருங்கல் கருவறையாக எழுப்பப்பட்டது. அர்த்த மண்டபம், மகா மண்டபம், மணி மண்டபம் மற்றும் விமானக் கோபுரங்களுடன் மூலவர் அருள்மிகு பாலதண்டாயுதபாணி சுவாமி, அருள்மிகு செல்வ விநாயகர், அருள்மிகு ஸ்ரீ மகா மாரியம்மன், ஸ்ரீதேவி பூதேவி சமேத ஸ்ரீ வரதராஜப் பெருமாள், ஆனந்த தாண்டவ ஸ்ரீ நடராஜப் பெருமான் & அன்னை சிவகாமி அம்மையார், மற்றும் நவகிரக நாயகர்கள், ஸ்ரீ பைரவர், மயில் வாகன சன்னதிகள் சாஸ்திர விதிப்படி பிரதிஷ்டை செய்யப்பட்டு கம்பீரமான ஆலயமாக உருப்பெற்றது." data-en="Through collective community devotion and charitable contributions, the humble altar evolved into a majestic granite sanctum (garbhagriha), followed by ardha-mandapam, maha-mandapam, vimanams, and dedicated shrines for Lord Ganesha, Murugan, and Navagrahas.">
+                            <p data-ta="சுக்கம்பாளையம் கிராம மக்களின் அளப்பரிய பக்தியினாலும், ஒற்றுமையினாலும் எளிய மேடையாக இருந்த ஆலயம் பின்னர் கருங்கல் கருவறையாக எழுப்பப்பட்டது. அர்த்த மண்டபம், மகா மண்டபம், மணி மண்டபம் மற்றும் விமானக் கோபுரங்களுடன் மூலவர் அருள்மிகு பாலதண்டாயுதபாணி சுவாமி, அருள்மிகு செல்வ விநாயகர், அருள்மிகு ஸ்ரீ மகா மாரியம்மன், ஸ்ரீதேவி பூதேவி சமேத ஸ்ரீ கரி வரதராஜப் பெருமாள், ஆனந்த தாண்டவ ஸ்ரீ நடராஜப் பெருமான் & அன்னை சிவகாமி அம்மையார், மற்றும் நவகிரக நாயகர்கள், ஸ்ரீ பைரவர், மயில் வாகன சன்னதிகள் சாஸ்திர விதிப்படி பிரதிஷ்டை செய்யப்பட்டு கம்பீரமான ஆலயமாக உருப்பெற்றது." data-en="Through collective community devotion and charitable contributions, the humble altar evolved into a majestic granite sanctum (garbhagriha), followed by ardha-mandapam, maha-mandapam, vimanams, and dedicated shrines for Lord Ganesha, Murugan, and Navagrahas.">
                                 சுக்கம்பாளையம் கிராம மக்களின் அளப்பரிய பக்தியினாலும், ஒற்றுமையினாலும் எளிய மேடையாக இருந்த ஆலயம் பின்னர் கருங்கல் கருவறையாக எழுப்பப்பட்டது. அதனைத் தொடர்ந்து அர்த்த மண்டபம், மகா மண்டபம், மணி மண்டபம் மற்றும் விமானக் கோபுரங்கள் சாஸ்திர விதிப்படி நிர்மாணிக்கப்பட்டன. மூலவருடன் செல்வ விநாயகர், பாலமுருகன், மற்றும் நவகிரக சன்னதிகளும் பிரதிஷ்டை செய்யப்பட்டு கம்பீரமான ஆலயமாக உருப்பெற்றது.
                             </p>
                             <div class="session-importance-box">
@@ -1615,53 +1765,46 @@
                 </div>
             </div>
 
-                        <!-- SLIDE 2: DARSHAN & TEMPLE TIMINGS (CLEAN & DIRECT SCHEDULE) -->
+                        <!-- SLIDE 2: DARSHAN & TEMPLE TIMINGS (AUTHENTIC SCHEDULE FROM TEMPLE) -->
             <div class="category-slide" id="slide-1">
                 <div class="section-header" style="margin-bottom:20px;">
-                    <h2 data-ta="சுக்கம்பாளையம் திருக்கோயில் தரிசன நேரங்கள்" data-en="Sukkampalayam Temple Darshan Timings">
-                        சுக்கம்பாளையம் திருக்கோயில் தரிசன நேரங்கள்
+                    <h2 data-ta="சுக்கம்பாளையம் திருக்கோயில் தினசரி & விசேஷ தரிசன நேரங்கள்" data-en="Sukkampalayam Temple Daily &amp; Special Pooja Timings">
+                        சுக்கம்பாளையம் திருக்கோயில் தினசரி & விசேஷ தரிசன நேரங்கள்
                     </h2>
-                    <p data-ta="பக்தர்கள் தரிசனம் செய்வதற்கான தினசரி காலை மற்றும் மாலை நடை நேர அட்டவணை" data-en="Daily morning and evening sanctum schedule for visiting devotees">
-                        பக்தர்கள் தரிசனம் செய்வதற்கான தினசரி காலை மற்றும் மாலை நடை நேர அட்டவணை
+                    <p data-ta="சுக்கம்பாளையம் திருக்கோயில்களில் தினசரி நடை திறந்திருக்கும் நேரம், வாராந்திர அபிஷேகங்கள் மற்றும் விரத தின சிறப்பு வழிபாட்டு அட்டவணை" data-en="Official sanctum opening hours, weekly special abhishekams, and festival vrat prayer schedule">
+                        சுக்கம்பாளையம் திருக்கோயில்களில் தினசரி நடை திறந்திருக்கும் நேரம், வாராந்திர அபிஷேகங்கள் மற்றும் விரத தின சிறப்பு வழிபாட்டு அட்டவணை
                     </p>
                 </div>
 
+                <!-- 1. Daily Sanctum Opening Hours (Morning & Evening) -->
                 <div class="timings-grid">
                     <!-- Morning Box -->
                     <div class="timing-box">
-                        <h3>☀️ <span data-ta="காலை தரிசன நேரங்கள்" data-en="Morning Darshan Hours">காலை தரிசன நேரங்கள்</span></h3>
+                        <h3>☀️ <span data-ta="தினசரி காலை நடை திறப்பு" data-en="Daily Morning Sanctum Hours">தினசரி காலை நடை திறப்பு</span></h3>
                         <div class="timing-line">
-                            <strong data-ta="நடை திறப்பு:" data-en="Sanctum Opens:">நடை திறப்பு:</strong>
+                            <strong data-ta="நடை திறக்கும் நேரம்:" data-en="Sanctum Opens:">நடை திறக்கும் நேரம்:</strong>
                             <span class="time-badge" data-ta="காலை 6:00 மணி" data-en="6:00 AM">காலை 6:00 மணி</span>
                         </div>
                         <div class="timing-line">
-                            <strong data-ta="காலை அபிஷேகம் & வழிபாடு:" data-en="Morning Abhishekam:">காலை அபிஷேகம் & வழிபாடு:</strong>
-                            <span class="time-badge" data-ta="காலை 7:30 மணி" data-en="7:30 AM">காலை 7:30 மணி</span>
-                        </div>
-                        <div class="timing-line">
                             <strong data-ta="பக்தர்கள் தரிசனம்:" data-en="Devotee Darshan:">பக்தர்கள் தரிசனம்:</strong>
-                            <span class="time-badge" data-ta="காலை 8:00 - 11:30 மணி" data-en="8:00 - 11:30 AM">காலை 8:00 - 11:30 மணி</span>
+                            <span class="time-badge" data-ta="காலை 6:00 - 10:00 மணி" data-en="6:00 AM - 10:00 AM">காலை 6:00 - 10:00 மணி</span>
                         </div>
                         <div class="timing-line">
-                            <strong data-ta="நண்பகல் நடை சாத்துதல்:" data-en="Noon Closing:">நண்பகல் நடை சாத்துதல்:</strong>
-                            <span class="time-badge" data-ta="மதியம் 12:00 மணி" data-en="12:00 PM">மதியம் 12:00 மணி</span>
+                            <strong data-ta="நண்பகல் நடை சாத்துதல்:" data-en="Sanctum Closes:">நண்பகல் நடை சாத்துதல்:</strong>
+                            <span class="time-badge" data-ta="காலை 10:00 மணி" data-en="10:00 AM">காலை 10:00 மணி</span>
                         </div>
                     </div>
 
                     <!-- Evening Box -->
                     <div class="timing-box">
-                        <h3>🌙 <span data-ta="மாலை தரிசன நேரங்கள்" data-en="Evening Darshan Hours">மாலை தரிசன நேரங்கள்</span></h3>
+                        <h3>🌙 <span data-ta="தினசரி மாலை நடை திறப்பு" data-en="Daily Evening Sanctum Hours">தினசரி மாலை நடை திறப்பு</span></h3>
                         <div class="timing-line">
-                            <strong data-ta="மாலை நடை திறப்பு:" data-en="Evening Re-opens:">மாலை நடை திறப்பு:</strong>
-                            <span class="time-badge" data-ta="மாலை 4:30 மணி" data-en="4:30 PM">மாலை 4:30 மணி</span>
+                            <strong data-ta="மாலை நடை திறக்கும் நேரம்:" data-en="Evening Re-opens:">மாலை நடை திறக்கும் நேரம்:</strong>
+                            <span class="time-badge" data-ta="மாலை 5:00 மணி" data-en="5:00 PM">மாலை 5:00 மணி</span>
                         </div>
                         <div class="timing-line">
-                            <strong data-ta="சாயரட்சை தீபாராதனை:" data-en="Evening Deeparadhana:">சாயரட்சை தீபாராதனை:</strong>
-                            <span class="time-badge" data-ta="மாலை 6:30 மணி" data-en="6:30 PM">மாலை 6:30 மணி</span>
-                        </div>
-                        <div class="timing-line">
-                            <strong data-ta="பக்தர்கள் அர்ச்சனை நேரம்:" data-en="Archana Time:">பக்தர்கள் அர்ச்சனை நேரம்:</strong>
-                            <span class="time-badge" data-ta="மாலை 6:45 - 7:45 மணி" data-en="6:45 - 7:45 PM">மாலை 6:45 - 7:45 மணி</span>
+                            <strong data-ta="பக்தர்கள் தரிசனம்:" data-en="Devotee Darshan:">பக்தர்கள் தரிசனம்:</strong>
+                            <span class="time-badge" data-ta="மாலை 5:00 - இரவு 8:00 மணி" data-en="5:00 PM - 8:00 PM">மாலை 5:00 - இரவு 8:00 மணி</span>
                         </div>
                         <div class="timing-line">
                             <strong data-ta="இரவு நடை சாத்துதல்:" data-en="Night Closing:">இரவு நடை சாத்துதல்:</strong>
@@ -1670,8 +1813,71 @@
                     </div>
                 </div>
 
-                <div class="about-quote" style="margin-top:25px;" data-ta="«விசேஷ நாட்கள்: கிருத்திகை, சஷ்டி (பாலதண்டாயுதபாணி சுவாமி), சங்கடஹர சதுர்த்தி (செல்வ விநாயகர்), செவ்வாய்/வெள்ளி (ஸ்ரீ மகா மாரியம்மன்), ஏகாதசி/புரட்டாசி (வரதராஜப் பெருமாள்), பிரதோஷம்/சிவராத்திரி (நடராஜர் & சிவகாமி அம்மை)»" data-en="«Special poojas are conducted on Tuesdays, Fridays, Pournami, Amavasai, and Pradosham days»">
-                    «விசேஷ நாட்கள்: கிருத்திகை, சஷ்டி (பாலதண்டாயுதபாணி சுவாமி), சங்கடஹர சதுர்த்தி (செல்வ விநாயகர்), செவ்வாய்/வெள்ளி (ஸ்ரீ மகா மாரியம்மன்), ஏகாதசி/புரட்டாசி (வரதராஜப் பெருமாள்), பிரதோஷம்/சிவராத்திரி (நடராஜர் & சிவகாமி அம்மை)»
+                <!-- 2. Weekly Special Abhishekams & Alankaram Pujas -->
+                <div style="margin-top:30px;">
+                    <h3 style="color:var(--primary); font-size:1.35rem; margin-bottom:15px; display:flex; align-items:center; gap:8px;">
+                        🗓️ <span data-ta="வாரந்தோறும் நடைபெறும் சிறப்பு அபிஷேக & அலங்கார பூஜைகள்" data-en="Weekly Special Abhishekam &amp; Alankaram Schedule">வாரந்தோறும் நடைபெறும் சிறப்பு அபிஷேக & அலங்கார பூஜைகள்</span>
+                    </h3>
+                    
+                    <div class="weekly-pooja-grid">
+                        <!-- Tuesday -->
+                        <div class="weekly-day-card">
+                            <div class="weekly-day-header">
+                                <span class="day-badge" data-ta="வாரம் தோறும் செவ்வாய்க்கிழமை" data-en="Every Tuesday">வாரம் தோறும் செவ்வாய்க்கிழமை</span>
+                                <span class="time-pill" data-ta="காலை 6:30 மணிக்கு" data-en="6:30 AM">காலை 6:30 மணிக்கு</span>
+                            </div>
+                            <h4 data-ta="🦚 அருள்மிகு செந்தில் ஆண்டவர்" data-en="🦚 Arulmigu Senthil Andavar">🦚 அருள்மிகு செந்தில் ஆண்டவர்</h4>
+                            <p data-ta="வாரம் தோறும் செவ்வாய்க்கிழமை காலை 6.30 மணிக்கு அருள்மிகு செந்தில் ஆண்டவருக்கு (பாலதண்டாயுதபாணி) அபிஷேக பூஜையும், அதனைத் தொடர்ந்து மங்கள அலங்கார பூஜையும் தீபாராதனையும் வெகு விமரிசையாக நடைபெறும்." data-en="Every Tuesday at 6:30 AM: Sacred Abhishekam puja for Lord Senthil Andavar followed by divine alankaram, flower adornment, and deeparadhana.">
+                                வாரம் தோறும் செவ்வாய்க்கிழமை காலை 6.30 மணிக்கு அருள்மிகு செந்தில் ஆண்டவருக்கு (பாலதண்டாயுதபாணி) அபிஷேக பூஜையும், அதனைத் தொடர்ந்து மங்கள அலங்கார பூஜையும் தீபாராதனையும் வெகு விமரிசையாக நடைபெறும்.
+                            </p>
+                        </div>
+
+                        <!-- Friday -->
+                        <div class="weekly-day-card">
+                            <div class="weekly-day-header">
+                                <span class="day-badge" data-ta="வாரந்தோறும் வெள்ளிக்கிழமை" data-en="Every Friday">வாரந்தோறும் வெள்ளிக்கிழமை</span>
+                                <span class="time-pill" data-ta="காலை 6:30 மணிக்கு" data-en="6:30 AM">காலை 6:30 மணிக்கு</span>
+                            </div>
+                            <h4 data-ta="🌺 அருள்மிகு மாகாளியம்மன்" data-en="🌺 Arulmigu Mahakali Amman">🌺 அருள்மிகு மாகாளியம்மன்</h4>
+                            <p data-ta="வாரந்தோறும் வெள்ளிக்கிழமை காலை 6.30 மணிக்கு அருள்மிகு மாகாளியம்மனுக்கு அபிஷேக பூஜையும், அதனைத் தொடர்ந்து குங்கும அர்ச்சனை, விசேஷ புஷ்ப அலங்கார பூஜையும் தீபாராதனையும் நடைபெறும்." data-en="Every Friday at 6:30 AM: Sacred Abhishekam puja for Arulmigu Mahakali Amman followed by special floral alankaram, kumkum archanai, and deeparadhana.">
+                                வாரந்தோறும் வெள்ளிக்கிழமை காலை 6.30 மணிக்கு அருள்மிகு மாகாளியம்மனுக்கு அபிஷேக பூஜையும், அதனைத் தொடர்ந்து குங்கும அர்ச்சனை, விசேஷ புஷ்ப அலங்கார பூஜையும் தீபாராதனையும் நடைபெறும்.
+                            </p>
+                        </div>
+
+                        <!-- Saturday -->
+                        <div class="weekly-day-card">
+                            <div class="weekly-day-header">
+                                <span class="day-badge" data-ta="வாரந்தோறும் சனிக்கிழமை" data-en="Every Saturday">வாரந்தோறும் சனிக்கிழமை</span>
+                                <span class="time-pill" data-ta="மாலை 6:30 மணிக்கு" data-en="6:30 PM">மாலை 6:30 மணிக்கு</span>
+                            </div>
+                            <h4 data-ta="🪷 அருள்மிகு கரி வரதராஜ பெருமாள்" data-en="🪷 Arulmigu Kari Varadaraja Perumal">🪷 அருள்மிகு கரி வரதராஜ பெருமாள்</h4>
+                            <p data-ta="வாரந்தோறும் சனிக்கிழமை மாலை 6:30 மணிக்கு அருள்மிகு கரி வரதராஜ பெருமாளுக்கு அபிஷேக பூஜையும், அதனைத் தொடர்ந்து துளசி மாலை சாத்தி திவ்ய அலங்கார பூஜையும் தீபாராதனையும் நடைபெறும்." data-en="Every Saturday at 6:30 PM: Sacred Abhishekam puja for Lord Kari Varadaraja Perumal followed by holy Tulsi garland adornment, alankaram, and deeparadhana.">
+                                வாரந்தோறும் சனிக்கிழமை மாலை 6:30 மணிக்கு அருள்மிகு கரி வரதராஜ பெருமாளுக்கு அபிஷேக பூஜையும், அதனைத் தொடர்ந்து துளசி மாலை சாத்தி திவ்ய அலங்கார பூஜையும் தீபாராதனையும் நடைபெறும்.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Special Monthly Vrat & Auspicious Days (6:30 PM to 9:30 PM) -->
+                <div class="vrat-special-box">
+                    <div class="vrat-special-header">
+                        <div>
+                            <span class="vrat-badge" data-ta="புனித விரத & விசேஷ தினங்கள்" data-en="Special Auspicious & Vrat Days">புனித விரத & விசேஷ தினங்கள்</span>
+                            <h3 data-ta="🌕 பௌர்ணமி • 🌑 அமாவாசை • 🦚 சஷ்டி • ⭐ கிருத்திகை • 🪷 ஏகாதசி" data-en="🌕 Pournami • 🌑 Amavasai • 🦚 Sashti • ⭐ Krithigai • 🪷 Ekadasi">
+                                🌕 பௌர்ணமி • 🌑 அமாவாசை • 🦚 சஷ்டி • ⭐ கிருத்திகை • 🪷 ஏகாதசி
+                            </h3>
+                        </div>
+                        <div class="vrat-time-highlight">
+                            <span data-ta="மாலை 6:30 மணி முதல் இரவு 9:30 மணி வரை" data-en="6:30 PM to 9:30 PM">மாலை 6:30 மணி முதல் இரவு 9:30 மணி வரை</span>
+                        </div>
+                    </div>
+                    <p data-ta="திருக்கோயிலில் பௌர்ணமி, அமாவாசை, சஷ்டி, கிருத்திகை, ஏகாதசி ஆகிய விசேஷ நாட்களில், அந்தந்த நாட்களில் மாலை 6.30 மணிக்கு சிறப்பு பூஜைகள் தொடங்கி இரவு 9.30 மணி வரை வெகு விமரிசையாக நடைபெறும். பக்தர்கள் அனைவரும் குடும்பத்துடன் வருகை தந்து இறை அருளைப் பெறலாம்." data-en="On sacred occasions including Pournami (Full Moon), Amavasai (New Moon), Sashti, Krithigai, and Ekadasi, elaborate special poojas commence at 6:30 PM in the evening and continue until 9:30 PM at night. All devotees are cordially invited to participate and receive divine grace.">
+                        திருக்கோயிலில் பௌர்ணமி, அமாவாசை, சஷ்டி, கிருத்திகை, ஏகாதசி ஆகிய விசேஷ நாட்களில், அந்தந்த நாட்களில் மாலை 6.30 மணிக்கு சிறப்பு பூஜைகள் தொடங்கி இரவு 9.30 மணி வரை வெகு விமரிசையாக நடைபெறும். பக்தர்கள் அனைவரும் குடும்பத்துடன் வருகை தந்து இறை அருளைப் பெறலாம்.
+                    </p>
+                </div>
+
+                <div class="about-quote" style="margin-top:25px;" data-ta="«சுக்கம்பாளையம் திருக்கோயில்கள் தினசரி காலை 6:00 - 10:00 & மாலை 5:00 - 8:00 வரை திறந்திருக்கும். விசேஷ நாட்களில் இரவு 9:30 மணி வரை தரிசனம் நடைபெறும்»" data-en="«Sukkampalayam Temples open daily 6:00 - 10:00 AM &amp; 5:00 - 8:00 PM; on special festival nights darshan continues until 9:30 PM»">
+                    «சுக்கம்பாளையம் திருக்கோயில்கள் தினசரி காலை 6:00 - 10:00 & மாலை 5:00 - 8:00 வரை திறந்திருக்கும். விசேஷ நாட்களில் இரவு 9:30 மணி வரை தரிசனம் நடைபெறும்»
                 </div>
             </div>
 
@@ -1892,7 +2098,7 @@
 
                     <!-- Deity 4: Varadaraja Perumal with Sridevi and Bhudevi -->
                     <div class="deity-card">
-                        <img src="images/temple_09.jpg" alt="ஸ்ரீதேவி பூதேவி சமேத ஸ்ரீ வரதராஜப் பெருமாள்" loading="lazy">
+                        <img src="images/temple_09.jpg" alt="ஸ்ரீதேவி பூதேவி சமேத ஸ்ரீ கரி வரதராஜப் பெருமாள்" loading="lazy">
                         <div class="deity-info">
                             <h4 data-ta="🪷 ஸ்ரீதேவி பூதேவி சமேத ஸ்ரீ வரதராஜப் பெருமாள்" data-en="🪷 Sri Sridevi &amp; Bhudevi Sametha Sri Varadaraja Perumal">🪷 ஸ்ரீதேவி பூதேவி சமேத ஸ்ரீ வரதராஜப் பெருமாள்</h4>
                             <p data-ta="சங்கு, சக்கரம், அபய முத்திரை ஏந்தி துளசி மற்றும் வெற்றிலை மாலைகளுடன் உபய நாச்சியார்களான ஸ்ரீதேவி மற்றும் பூதேவி தாயாருடன் திவ்ய தரிசனம் தரும் மகாவிஷ்ணு. குடும்ப அமைதி, தன தானிய விருத்தி மற்றும் சகல சௌபாக்கியங்களும் அருளும் சன்னதி." data-en="Lord Maha Vishnu holding conch and discus with sacred Tulsi garlands, accompanied by consorts Sridevi and Bhudevi. Bestows supreme peace, family harmony, and spiritual wealth.">
