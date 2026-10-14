@@ -1538,6 +1538,121 @@
             margin: 0;
         }
 
+    
+        /* --- Festival Card Photo Layout --- */
+        .fest-card {
+            background: linear-gradient(180deg, #ffffff 0%, #fffbf2 100%);
+            border: 1px solid var(--gold-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .fest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        .fest-card-img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 2px solid var(--gold);
+        }
+        .fest-card-body {
+            padding: 20px 22px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        /* --- Dedicated Kumbhabhishekam Column / Slide Styling --- */
+        .kumbha-top-pill {
+            display: inline-block;
+            background: var(--gold-gradient);
+            color: #360000;
+            font-weight: 800;
+            font-size: 0.92rem;
+            padding: 5px 18px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 3px 10px rgba(212,175,55,0.3);
+        }
+        .kumbha-banner-card {
+            background: linear-gradient(135deg, #fffdf8 0%, #fff5e0 100%);
+            border: 2px solid var(--gold);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: 0 8px 30px rgba(120,0,0,0.08);
+            margin-top: 15px;
+        }
+        .kumbha-banner-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 25px;
+            align-items: center;
+        }
+        @media (max-width: 800px) {
+            .kumbha-banner-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .kumbha-date-badge {
+            background: var(--primary);
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 6px 18px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 10px rgba(120,0,0,0.25);
+        }
+        .kumbha-banner-left h3 {
+            color: var(--primary);
+            font-size: 1.45rem;
+            margin-bottom: 10px;
+        }
+        .kumbha-banner-left p {
+            color: #444;
+            font-size: 1.02rem;
+            line-height: 1.7;
+        }
+        .kumbha-feature-list {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.98rem;
+            color: #333;
+        }
+        .kumbha-banner-right img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid var(--gold);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .kumbha-gallery-grid-10 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        .kumbha-photo-count {
+            background: #faf4e8;
+            color: var(--primary);
+            border: 1px solid var(--gold);
+            font-weight: 800;
+            font-size: 0.9rem;
+            padding: 5px 14px;
+            border-radius: 15px;
+        }
+
     </style>
 </head>
 <body>
@@ -1639,7 +1754,7 @@
                     <button class="btn-slide-step" onclick="changeSlideStep(-1)" title="முந்தைய பகுதி / Previous Slide">
                         ◀ <span data-ta="முந்தைய பகுதி" data-en="Prev Slide">முந்தையது</span>
                     </button>
-                    <span class="slide-indicator-label" id="slideIndicator">1 / 9</span>
+                    <span class="slide-indicator-label" id="slideIndicator">1 / 10</span>
                     <button class="btn-slide-step" onclick="changeSlideStep(1)" title="அடுத்த பகுதி / Next Slide">
                         <span data-ta="அடுத்த பகுதி" data-en="Next Slide">அடுத்தது</span> ▶
                     </button>
@@ -1716,8 +1831,8 @@
                                 சுக்கம்பாளையம் கிராம மக்களின் அளப்பரிய பக்தியினாலும், ஒற்றுமையினாலும் எளிய மேடையாக இருந்த ஆலயம் பின்னர் கருங்கல் கருவறையாக எழுப்பப்பட்டது. அதனைத் தொடர்ந்து அர்த்த மண்டபம், மகா மண்டபம், மணி மண்டபம் மற்றும் விமானக் கோபுரங்கள் சாஸ்திர விதிப்படி நிர்மாணிக்கப்பட்டன. மூலவருடன் செல்வ விநாயகர், பாலமுருகன், மற்றும் நவகிரக சன்னதிகளும் பிரதிஷ்டை செய்யப்பட்டு கம்பீரமான ஆலயமாக உருப்பெற்றது.
                             </p>
                             <div class="session-importance-box">
-                                <strong data-ta="🪔 மகா கும்பாபிஷேகப் பெருமை:" data-en="🪔 Consecration Milestones:">🪔 மகா கும்பாபிஷேகப் பெருமை:</strong>
-                                <span data-ta="வேத சிவாகம முறைப்படி சிவாச்சாரியார்கள் மந்திரங்கள் முழங்க, புனித தீர்த்தங்கள் கலசங்களில் ஊற்றப்பட்டு மகா கும்பாபிஷேகம் வெகு விமரிசையாக நடத்தப்பட்டது. அன்று முதல் 5 கால நித்ய பூஜைகள் தவறாது நடத்தப்பட்டு வருகின்றன." data-en="Solemn Kumbhabhishekam consecrations with Vedic Agamic rituals were conducted, inaugurating the unbroken tradition of five-time daily pooja sessions.">வேத சிவாகம முறைப்படி சிவாச்சாரியார்கள் மந்திரங்கள் முழங்க, புனித தீர்த்தங்கள் கலசங்களில் ஊற்றப்பட்டு மகா கும்பாபிஷேகம் வெகு விமரிசையாக நடத்தப்பட்டது. அன்று முதல் 5 கால நித்ய பூஜைகள் தவறாது நடத்தப்பட்டு வருகின்றன.</span>
+                                <strong data-ta="🪔 மகா கும்பாபிஷேகப் பெருமை (07.07.2025):" data-en="🪔 Consecration Milestones (07.07.2025):">🪔 மகா கும்பாபிஷேகப் பெருமை:</strong>
+                                <span data-ta="வேத சிவாகம முறைப்படி சிவாச்சாரியார்கள் மந்திரங்கள் முழங்க, புனித தீர்த்தங்கள் கலசங்களில் ஊற்றப்பட்டு கடந்த 07.07.2025 அன்று அனைத்து சன்னதிகளுக்கும் மகா கும்பாபிஷேகம் வெகு விமரிசையாக நடத்தப்பட்டது. அன்று முதல் 5 கால நித்ய பூஜைகள் தவறாது நடத்தப்பட்டு வருகின்றன." data-en="Solemn Kumbhabhishekam consecrations with Vedic Agamic rituals were conducted, inaugurating the unbroken tradition of five-time daily pooja sessions.">வேத சிவாகம முறைப்படி சிவாச்சாரியார்கள் மந்திரங்கள் முழங்க, புனித தீர்த்தங்கள் கலசங்களில் ஊற்றப்பட்டு மகா கும்பாபிஷேகம் வெகு விமரிசையாக நடத்தப்பட்டது. அன்று முதல் 5 கால நித்ய பூஜைகள் தவறாது நடத்தப்பட்டு வருகின்றன.</span>
                             </div>
                         </div>
                     </div>
@@ -1924,8 +2039,131 @@
                 </div>
             </div>
 
-            <!-- SLIDE 4: DONATIONS & ANNADHANAM (SEPARATE COLUMN / CATEGORY) -->
+            <!-- SLIDE 4: HISTORIC MAHA KUMBHABHISHEKAM (07.07.2025) & LATEST 10 PHOTOS -->
             <div class="category-slide" id="slide-3">
+                <div class="section-header" style="margin-bottom:20px;">
+                    <span class="kumbha-top-pill" data-ta="✨ வரலாற்றுப் பெருவிழா • நன்னாள்: 07.07.2025" data-en="✨ Historic Consecration • Date: 07.07.2025">✨ வரலாற்றுப் பெருவிழா • நன்னாள்: 07.07.2025</span>
+                    <h2 data-ta="சுக்கம்பாளையம் திருக்கோயில்கள் மகா கும்பாபிஷேகம் (07.07.2025)" data-en="Sukkampalayam Grand Maha Kumbhabhishekam (07.07.2025)">
+                        சுக்கம்பாளையம் திருக்கோயில்கள் மகா கும்பாபிஷேகம் (07.07.2025)
+                    </h2>
+                    <p data-ta="கடந்த 07.07.2025 அன்று வேத மந்திரங்கள் முழங்க நடைபெற்ற வரலாற்றுச் சிறப்புமிக்க மகா கும்பாபிஷேக நன்னாள் & கேமரா ரோலின் புதிய 10 புகைப்படங்கள்" data-en="The grand consecration celebrated on 07.07.2025 with Vedic rituals, featuring the latest 10 photographs from camera roll">
+                        கடந்த 07.07.2025 அன்று வேத மந்திரங்கள் முழங்க நடைபெற்ற வரலாற்றுச் சிறப்புமிக்க மகா கும்பாபிஷேக நன்னாள் & கேமரா ரோலின் புதிய 10 புகைப்படங்கள்
+                    </p>
+                </div>
+
+                <!-- Kumbhabhishekam Event Details Box -->
+                <div class="kumbha-banner-card">
+                    <div class="kumbha-banner-grid">
+                        <div class="kumbha-banner-left">
+                            <span class="kumbha-date-badge">📅 07.07.2025 (7 ஜூலை 2025)</span>
+                            <h3 data-ta="வேத சிவாகம முறைப்படி நடைபெற்ற திருப்பணி மகா நன்னீராட்டுப் பெருவிழா" data-en="Sacred Consecration of Sanctums and Golden Kalasams">
+                                வேத சிவாகம முறைப்படி நடைபெற்ற திருப்பணி மகா நன்னீராட்டுப் பெருவிழா
+                            </h3>
+                            <p data-ta="சுக்கம்பாளையம் கிராம மக்களின் அளப்பரிய பக்தியினாலும், ஒற்றுமையினாலும் திருப்பணிகள் யாவும் சாஸ்திர முறைப்படி இனிதே நிறைவுபெற்று, மூலவர் அருள்மிகு செந்தில் ஆண்டவர் (பாலதண்டாயுதபாணி), அருள்மிகு செல்வ விநாயகர், அருள்மிகு மாகாளியம்மன், ஸ்ரீதேவி பூதேவி சமேத அருள்மிகு கரி வரதராஜ பெருமாள் மற்றும் ஆனந்த தாண்டவ ஸ்ரீ நடராஜர் - சிவகாமி அம்மையார் ஆகிய அனைத்து சன்னதிகளுக்கும் விமானக் கலசங்களுக்கும் கடந்த 07.07.2025 அன்று சிவாச்சாரியார்கள் வேத மந்திரங்கள் முழங்க மகா கும்பாபிஷேகம் வெகு விமரிசையாக நடத்தப்பட்டது." data-en="Through collective faith and unity, comprehensive temple renovations concluded in accordance with Agamic scriptures. On 07.07.2025, sacred Maha Kumbhabhishekam was consecrated with holy waters poured upon all sanctum vimanams amidst chanting of Vedic hymns and blessings of thousands of devotees.">
+                                சுக்கம்பாளையம் கிராம மக்களின் அளப்பரிய பக்தியினாலும், ஒற்றுமையினாலும் திருப்பணிகள் யாவும் சாஸ்திர முறைப்படி இனிதே நிறைவுபெற்று, மூலவர் அருள்மிகு செந்தில் ஆண்டவர் (பாலதண்டாயுதபாணி), அருள்மிகு செல்வ விநாயகர், அருள்மிகு மாகாளியம்மன், ஸ்ரீதேவி பூதேவி சமேத அருள்மிகு கரி வரதராஜ பெருமாள் மற்றும் ஆனந்த தாண்டவ ஸ்ரீ நடராஜர் - சிவகாமி அம்மையார் ஆகிய அனைத்து சன்னதிகளுக்கும் விமானக் கலசங்களுக்கும் கடந்த 07.07.2025 அன்று சிவாச்சாரியார்கள் வேத மந்திரங்கள் முழங்க மகா கும்பாபிஷேகம் வெகு விமரிசையாக நடத்தப்பட்டது.
+                            </p>
+                            <div class="kumbha-feature-list">
+                                <div>🪔 <strong>கும்பாபிஷேகத் திருநாள்:</strong> 07.07.2025 (திங்கட்கிழமை)</div>
+                                <div>🏺 <strong>யாகசாலை வைபவம்:</strong> வேத முறைப்படி நான்கு கால யாகசாலை வேள்வி பூஜைகள்</div>
+                                <div>🍚 <strong>அன்னதானப் பெருந்தொண்டு:</strong> பல்லாயிரக்கணக்கான பக்தர்களுக்கு அறுசுவை மகா அன்னதானம்</div>
+                            </div>
+                        </div>
+                        <div class="kumbha-banner-right">
+                            <img src="images/temple_14.jpg" alt="அருள்மிகு செந்தில் ஆண்டவர் கும்பாபிஷேக அலங்காரம்" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest 10 Photos from Camera Roll -->
+                <div style="margin-top:35px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:18px;">
+                        <div>
+                            <h3 style="color:var(--primary); font-size:1.45rem; margin-bottom:4px;" data-ta="📸 கும்பாபிஷேகத் திருநாளின் அண்மைய 10 அரிய புகைப்படங்கள்" data-en="📸 Latest 10 Photos from Camera Roll">
+                                📸 கும்பாபிஷேகத் திருநாளின் அண்மைய 10 அரிய புகைப்படங்கள்
+                            </h3>
+                            <p style="color:#666; font-size:0.95rem; margin:0;" data-ta="கேமரா ரோலில் இருந்து நேரடியாகப் பெறப்பட்ட புதிய 10 புகைப்படங்கள் (பெரிதாக்க கிளிக் செய்யவும்)" data-en="Directly retrieved 10 latest photos from camera roll (Click to open full-screen view)">
+                                கேமரா ரோலில் இருந்து நேரடியாகப் பெறப்பட்ட புதிய 10 புகைப்படங்கள் (பெரிதாக்க கிளிக் செய்யவும்)
+                            </p>
+                        </div>
+                        <span class="kumbha-photo-count">10 அரிய புகைப்படங்கள்</span>
+                    </div>
+
+                    <div class="kumbha-gallery-grid-10">
+                        <!-- Photo 1: temple_09.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="8" data-src="images/temple_09.jpg" data-cap="ஸ்ரீதேவி பூதேவி சமேத ஸ்ரீ கரி வரதராஜ பெருமாள் துளசி அலங்காரம் (படம் 09)">
+                            <img src="images/temple_09.jpg" alt="ஸ்ரீ கரி வரதராஜ பெருமாள் துளசி அலங்காரம்" loading="lazy">
+                            <span class="tile-badge">01 / 10</span>
+                            <div class="tile-caption-bar"><span>கரி வரதராஜ பெருமாள் துளசி அலங்காரம்</span></div>
+                        </div>
+
+                        <!-- Photo 2: temple_10.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="9" data-src="images/temple_10.jpg" data-cap="கும்பாபிஷேக மகா அன்னதானத் திருப்பணி சேவை (படம் 10)">
+                            <img src="images/temple_10.jpg" alt="கும்பாபிஷேக அன்னதான சேவை" loading="lazy">
+                            <span class="tile-badge">02 / 10</span>
+                            <div class="tile-caption-bar"><span>கும்பாபிஷேக மகா அன்னதானம்</span></div>
+                        </div>
+
+                        <!-- Photo 3: temple_11.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="10" data-src="images/temple_11.jpg" data-cap="கும்பாபிஷேக திருநாள் பிரகார பக்தி வழிபாடு (படம் 11)">
+                            <img src="images/temple_11.jpg" alt="பிரகாரத்தில் பக்தர்கள் வழிபாடு" loading="lazy">
+                            <span class="tile-badge">03 / 10</span>
+                            <div class="tile-caption-bar"><span>பிரகார பக்தி வழிபாடு</span></div>
+                        </div>
+
+                        <!-- Photo 4: temple_12.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="11" data-src="images/temple_12.jpg" data-cap="அருள்மிகு செல்வ விநாயகர் தங்கத் திருவாசி பொன்னலங்காரம் (படம் 12)">
+                            <img src="images/temple_12.jpg" alt="செல்வ விநாயகர் பொன்னலங்காரம்" loading="lazy">
+                            <span class="tile-badge">04 / 10</span>
+                            <div class="tile-caption-bar"><span>செல்வ விநாயகர் தங்கத் திருவாசி</span></div>
+                        </div>
+
+                        <!-- Photo 5: temple_13.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="12" data-src="images/temple_13.jpg" data-cap="ஸ்ரீதேவி பூதேவி சமேத ஸ்ரீ கரி வரதராஜ பெருமாள் வெற்றிலை & புஷ்ப சாத்துபடி (படம் 13)">
+                            <img src="images/temple_13.jpg" alt="கரி வரதராஜ பெருமாள் வெற்றிலை மாலை" loading="lazy">
+                            <span class="tile-badge">05 / 10</span>
+                            <div class="tile-caption-bar"><span>பெருமாள் வெற்றிலை மாலை அலங்காரம்</span></div>
+                        </div>
+
+                        <!-- Photo 6: temple_14.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="13" data-src="images/temple_14.jpg" data-cap="அருள்மிகு செந்தில் ஆண்டவர் (மூலவர்) சக்தி வேல் & தங்க கிரீட அருட்கோலம் (படம் 14)">
+                            <img src="images/temple_14.jpg" alt="செந்தில் ஆண்டவர் சக்தி வேல் தரிசனம்" loading="lazy">
+                            <span class="tile-badge">06 / 10</span>
+                            <div class="tile-caption-bar"><span>செந்தில் ஆண்டவர் சக்தி வேல் அலங்காரம்</span></div>
+                        </div>
+
+                        <!-- Photo 7: temple_15.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="14" data-src="images/temple_15.jpg" data-cap="ஆலய மகா மண்டபத்தில் தீபாராதனை தரிசிக்கும் பெருந்திரளான பக்தர்கள் (படம் 15)">
+                            <img src="images/temple_15.jpg" alt="மகா மண்டபத்தில் பக்தர்கள் தரிசனம்" loading="lazy">
+                            <span class="tile-badge">07 / 10</span>
+                            <div class="tile-caption-bar"><span>மகா மண்டப தீபாராதனை தரிசனம்</span></div>
+                        </div>
+
+                        <!-- Photo 8: temple_16.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="15" data-src="images/temple_16.jpg" data-cap="அருள்மிகு மாகாளியம்மன் பொன் திரிசூலம், அக்னி கிரீட அலங்காரம் (படம் 16)">
+                            <img src="images/temple_16.jpg" alt="மாகாளியம்மன் திரிசூல அலங்காரம்" loading="lazy">
+                            <span class="tile-badge">08 / 10</span>
+                            <div class="tile-caption-bar"><span>மாகாளியம்மன் பொன் திரிசூல தரிசனம்</span></div>
+                        </div>
+
+                        <!-- Photo 9: temple_17.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="16" data-src="images/temple_17.jpg" data-cap="அந்தி சாயரட்சை தீபாராதனை மங்கள தரிசனம் (படம் 17)">
+                            <img src="images/temple_17.jpg" alt="சாயரட்சை தீபாராதனை தரிசனம்" loading="lazy">
+                            <span class="tile-badge">09 / 10</span>
+                            <div class="tile-caption-bar"><span>சாயரட்சை தீபாராதனை வைபவம்</span></div>
+                        </div>
+
+                        <!-- Photo 10: temple_18.jpg -->
+                        <div class="gallery-tile" tabindex="0" role="button" data-idx="17" data-src="images/temple_18.jpg" data-cap="திருக்கோயில் மணி மண்டபம் & இரவு நேர மங்கள நிறைவு தரிசனம் (படம் 18)">
+                            <img src="images/temple_18.jpg" alt="கோயில் மணி மண்டபம் இரவு தரிசனம்" loading="lazy">
+                            <span class="tile-badge">10 / 10</span>
+                            <div class="tile-caption-bar"><span>மணி மண்டபம் மங்கள நிறைவு தரிசனம்</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: DONATIONS & ANNADHANAM (SEPARATE COLUMN / CATEGORY) -->
+            <div class="category-slide" id="slide-4">
                 <div class="section-header" style="margin-bottom:20px;">
                     <h2 data-ta="சுக்கம்பாளையம் அன்னதானம் & திருப்பணி நன்கொடை" data-en="Annadhanam &amp; Temple Fund Donation">சுக்கம்பாளையம் அன்னதானம் & திருப்பணி நன்கொடை</h2>
                     <p data-ta="இறைப் பணிகளிலும் பக்தர்களுக்கான அன்னதானப் பெருந்தொண்டிலும் இணைந்து அருள்பெறுங்கள்" data-en="Support daily poojas, mass food distribution, and temple maintenance">
@@ -1988,7 +2226,7 @@
             </div>
 
             <!-- SLIDE 5: CONTACT & ROUTE DIRECTIONS -->
-            <div class="category-slide" id="slide-4">
+            <div class="category-slide" id="slide-5">
                 <div class="section-header" style="margin-bottom:20px;">
                     <h2 data-ta="சுக்கம்பாளையம் தொடர்பு & பயண வழிகாட்டி" data-en="Contact &amp; Location Guide">சுக்கம்பாளையம் தொடர்பு & பயண வழிகாட்டி</h2>
                     <p data-ta="ஆலய நிர்வாகம், அர்ச்சகர் தொடர்பு மற்றும் கூகுள் வரைபட வழிகாட்டுதல்" data-en="Temple administration contacts and easy road navigation">
@@ -2054,7 +2292,7 @@
             </div>
 
             <!-- SLIDE 6: SANCTUMS & DEITIES -->
-            <div class="category-slide" id="slide-5">
+            <div class="category-slide" id="slide-6">
                 <div class="section-header" style="margin-bottom:20px;">
                     <h2 data-ta="சுக்கம்பாளையம் சன்னதிகள் & தெய்வத் திருமேனிகள்" data-en="Sanctums &amp; Deities">சுக்கம்பாளையம் சன்னதிகள் & தெய்வத் திருமேனிகள்</h2>
                     <p data-ta="சுக்கம்பாளையம் திருத்தலத்தில் முறைப்படி அருள்பாலிக்கும் புண்ணிய சன்னதிகள் & தெய்வத் திருமேனிகள்" data-en="The revered sanctums and consecrated deities gracing Arulmigu Sukkampalayam Temple complex">
@@ -2122,7 +2360,7 @@
             </div>
 
             <!-- SLIDE 7: 18 PHOTOS FROM CAMERA ROLL -->
-            <div class="category-slide" id="slide-6">
+            <div class="category-slide" id="slide-7">
                 <div class="gallery-controls-bar">
                     <div>
                         <h2 data-ta="சுக்கம்பாளையம் புகைப்படத் தொகுப்பு (18 படங்கள்)" data-en="Photo Gallery (18 Photos)">சுக்கம்பாளையம் புகைப்படத் தொகுப்பு (18 படங்கள்)</h2>
@@ -2231,7 +2469,7 @@
 
             <!-- SLIDE 8: DEVOTIONAL VIDEO DARSHAN -->
 
-            <div class="category-slide" id="slide-7">
+            <div class="category-slide" id="slide-8">
                 <div class="section-header" style="margin-bottom:20px;">
                     <h2 data-ta="சுக்கம்பாளையம் நேரடி வீடியோ தரிசனம்" data-en="Devotional Video Darshan">சுக்கம்பாளையம் நேரடி வீடியோ தரிசனம்</h2>
                     <p data-ta="திருவிழா உற்சவங்கள், மங்கள தீபாராதனை மற்றும் வழிபாட்டுக் காட்சிகள் (கேமரா ரோலில் இருந்து)" data-en="Real video recordings of sacred rituals and processions from Camera Roll">
@@ -2294,7 +2532,7 @@
             </div>
 
             <!-- SLIDE 9: ONLINE POOJA BOOKING -->
-            <div class="category-slide" id="slide-8">
+            <div class="category-slide" id="slide-9">
                 <div class="section-header" style="margin-bottom:20px;">
                     <h2 data-ta="சுக்கம்பாளையம் சிறப்பு அர்ச்சனை & பிரசாத முன்பதிவு" data-en="Special Pooja &amp; Prasadam Booking">சுக்கம்பாளையம் சிறப்பு அர்ச்சனை & பிரசாத முன்பதிவு</h2>
                     <p data-ta="உங்கள் பிறந்தநாள் மற்றும் விசேஷ நாட்களில் உங்கள் பெயரில் அர்ச்சனை செய்ய" data-en="Book pooja in your name for birthdays, anniversaries, and family blessings">
@@ -2400,7 +2638,24 @@
                 </p>
             </div>
 
-            <div class="pillars-grid-5">
+            <div class="pillars-grid-5" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+                <!-- Dedicated Column: Maha Kumbhabhishekam (07.07.2025) -->
+                <div class="pillar-card" style="border: 2px solid var(--gold); background: #fffcf2;">
+                    <div>
+                        <span class="pillar-icon">✨</span>
+                        <h3 data-ta="மகா கும்பாபிஷேகம் (07.07.2025)" data-en="Kumbhabhishekam (07.07.2025)">மகா கும்பாபிஷேகம் (07.07.2025)</h3>
+                        <p data-ta="கடந்த 07.07.2025 அன்று வேத ஆகம முறைப்படி சிவாச்சாரியார்கள் மந்திரங்கள் முழங்க நடைபெற்ற வரலாற்றுச் சிறப்புமிக்க மகா கும்பாபிஷேகப் பெருவிழா." data-en="Grand Maha Kumbhabhishekam consecration conducted with Vedic Agamic rituals on 07.07.2025 with thousands of devotees.">
+                            கடந்த 07.07.2025 அன்று வேத ஆகம முறைப்படி சிவாச்சாரியார்கள் மந்திரங்கள் முழங்க நடைபெற்ற வரலாற்றுச் சிறப்புமிக்க மகா கும்பாபிஷேகப் பெருவிழா.
+                        </p>
+                        <ul>
+                            <li><strong data-ta="நன்னாள்:" data-en="Date:">நன்னாள்:</strong> 07.07.2025</li>
+                            <li><strong data-ta="திருப்பணி:" data-en="Sanctums:">திருப்பணி:</strong> அனைத்து சன்னதிகள்</li>
+                            <li><strong data-ta="படங்கள்:" data-en="Photos:">படங்கள்:</strong> அண்மைய 10 புகைப்படங்கள்</li>
+                        </ul>
+                    </div>
+                    <button onclick="goToSlide(3)" class="pillar-btn" style="background:var(--primary); color:#ffffff;" data-ta="கும்பாபிஷேகம் காண்க →" data-en="View Consecration →">கும்பாபிஷேகம் காண்க →</button>
+                </div>
 
                 <!-- Col 1: About Temple -->
                 <div class="pillar-card">
@@ -2466,7 +2721,7 @@
                             <li><strong data-ta="நன்மைகள்:" data-en="Merits:">நன்மைகள்:</strong> <span data-ta="அன்னதானம் & திருப்பணி" data-en="Renovation & Annadhanam">அன்னதானம் & திருப்பணி</span></li>
                         </ul>
                     </div>
-                    <button onclick="goToSlide(3)" class="pillar-btn" data-ta="நன்கொடை விவரம் →" data-en="Donate Now →">நன்கொடை விவரம் →</button>
+                    <button onclick="goToSlide(4)" class="pillar-btn" data-ta="நன்கொடை விவரம் →" data-en="Donate Now →">நன்கொடை விவரம் →</button>
                 </div>
 
                 <!-- Col 5: Contact -->
@@ -2483,7 +2738,7 @@
                             <li><strong data-ta="வாட்ஸ்அப்:" data-en="WhatsApp:">வாட்ஸ்அப்:</strong> <a href="https://wa.me/919876543210" target="_blank" rel="noopener">தொடர்பு கொள்ள</a></li>
                         </ul>
                     </div>
-                    <button onclick="goToSlide(4)" class="pillar-btn" data-ta="தொடர்பு கொள்ள →" data-en="Get in Touch →">தொடர்பு கொள்ள →</button>
+                    <button onclick="goToSlide(5)" class="pillar-btn" data-ta="தொடர்பு கொள்ள →" data-en="Get in Touch →">தொடர்பு கொள்ள →</button>
                 </div>
 
             </div>
@@ -2570,7 +2825,7 @@
     <!-- Dynamic JavaScript -->
     <script>
         // ---- 1. Interactive Category Carousel / Slider (User Requested Feature) ----
-        var totalSlides = 9;
+        var totalSlides = 10;
         var currentSlideIdx = 0;
 
         function goToSlide(idx) {
